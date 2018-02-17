@@ -1,0 +1,234 @@
+$(function(){
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    var navId;
+    var subNavId = 0;
+    var pageSize = 2;
+    var currentPage = 1;
+    var totalPage = 0;
+    var $pagenums;
+    var $table;
+    var queryStr="";
+    var $lis = $('#indexul li');
+    $.each($lis,function(i,v){
+        if($(this).hasClass('cur')){
+            navId = $(this).children('a').attr('idx');
+        }
+    });
+    if(navId == 2 || navId == 4){
+        querySubNav(navId);
+    }
+    //获取二级菜单
+    function querySubNav(id) {
+        if(id==null || id==""){
+            return;
+        }else{
+            $.ajax({
+                type:"GET",
+                timeout:10000,
+                url:httpUrl+"/nav/subNav/"+id+"",
+                async:false,
+                dataType:"json",
+                success:function(res){
+                    if(res.data.length!=0){
+                        $.each(res.data,function(i,v){
+                            $('#lablecontent').append("<a href='#' value='"+v.id+"'>"+v.name+"<em style=\"display: none;\"></em></a>");
+                        })
+                    }
+                }
+            });
+        }
+    }
+    //获取文章列表
+    //有二级菜单的
+    var $lable = $('#lablecontent').children('a');
+    if($lable.length!=0){
+        $.each($lable,function(i,v){
+            $(this).click(function () {
+                subNavId = $(this).attr('value');
+                //新闻数量
+                queryNews(queryStr,navId,subNavId);
+                //显示列表(首页)
+                queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+                if($pagenums.length!=0){
+                    $.each($pagenums,function(){
+                        $(this).click(function(){
+                            currentPage = $(this).text();
+                            queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+
+                            $('.currentPage').html(currentPage);
+                        })
+                    })
+                }
+            });
+        })
+    }else if($lable.length==0){
+        //若没有二级菜单
+        //新闻数量
+        queryNews(queryStr,navId,subNavId);
+        //显示列表(首页)
+        queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+        //显示其他ye
+        if($pagenums.length!=0){
+            $.each($pagenums,function(){
+                $(this).click(function(){
+                    currentPage = $(this).text();
+                    queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+                    $('.currentPage').html(currentPage);
+                })
+            })
+        }
+    }
+
+    //获取文章条数
+    function queryNews(queryStr,navId,subNavId) {
+
+        var $oldpagenum = $('.pagenumb');
+        if($oldpagenum.length!=0){
+            $oldpagenum.remove();
+        }
+        var url;
+        if(queryStr == ""){
+            url = httpUrl+"/admin/count/"+navId+"/"+subNavId+"";
+        }else{
+            url = httpUrl+"/admin/count/"+queryStr+"/"+navId+"/"+subNavId+"";
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            timeout:10000,
+            async:false,
+            url:url,
+            success:function(res){
+                //页码
+                $('.totalNews').html(res.data);
+            }
+        });
+        //分页
+        var totalNews = $('.totalNews').text();
+        totalPage = Math.ceil(totalNews/pageSize);
+        $('.totalPages').text(totalPage);
+        for(var i = 1;i<=totalPage;i++) {
+            $('.pagenext').before("<a href='#' class='pagenumb'>" + i + "</a>");
+        }
+        //??
+        $pagenums = $('.pagenumb');
+    }
+
+    function queryNewsList(queryStr,navId,subNavId,currentPage,pageSize) {
+        var url;
+        if(queryStr == ""){
+            url = httpUrl+"/admin/list/"+navId+"/"+subNavId+"/"+currentPage+"/"+pageSize+"";
+        }else{
+            url = httpUrl+"/admin/list/"+queryStr+"/"+navId+"/"+subNavId+"/"+currentPage+"/"+pageSize+"";
+        }
+        var $oldtable = $('#newsLists');
+        //每次清除上一次的 记录
+        if($oldtable.children().length!=0){
+            $oldtable.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            timeout:10000,
+            dataType:"json",
+            async:false,
+            url:url,
+            success:function(res){
+                $.each(res.data,function(i,v){
+                    var times = transTime(v.publishTime==null?null : v.publishTime.time);
+                    $oldtable.append(
+                        "<tr data-id="+v.id+"><td class='t_1'>"+v.id+"</td>"+
+                        "<td class='t_2'>"+v.title+"</td>"+
+                        "<td class='t_3'>否</td>"+
+                        "<td class='t_4'>否</td>"+
+                        "<td class='t_4'>未发布</td>"+
+                        "<td class='t_4'>"+times+"</td>"+
+                        "<td class='t_7'><div class='btn'><a href='#' class='modify'>修改</a><a href='#' class='delete'>删除</a><a href='#' class='published'>发布</a></div></td>"+
+                        "</tr>"
+                    );
+                })
+                $table = $('#newsLists');
+            }
+        })
+
+
+    }
+
+    //前后页
+    var $pre = $('.pagePre');
+    var $next = $('.pagenext');
+    $pre.click(function(){
+        if(currentPage == 1){
+            return;
+        }else {
+            currentPage--;
+            queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+            $('.currentPage').html(currentPage);
+        }
+    });
+    $next.click(function(){
+        if(currentPage == totalPage){
+            return;
+        }else {
+            currentPage++;
+            queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+            $('.currentPage').html(currentPage);
+        }
+    });
+
+    //搜索获取新闻列表
+
+    $('#searchBtn').click(function(){
+        queryStr = $('#search').val();
+        queryNews(queryStr,navId,subNavId);
+        queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+    });
+
+    //操作部分
+    var $trs = $table.children();
+
+    if($trs.length!=0){
+        $.each($trs,function(i,v){
+            var dataid = $(this).attr('data-id');
+            var $options = $(this).find('a');
+            $.each($options,function(){
+                $(this).click(function(){
+                    if($(this).attr('class')=="modify"){
+
+                    }else if($(this).attr('class')=="delete"){
+                        //deleteNew(dataid);
+                    }else if($(this).attr('class')=="published"){
+
+                    }
+
+                })
+            })
+        })
+    }
+
+    function deleteNew(id){
+        if(id=="" || id==null){
+            return;
+        }else{
+            $.ajax({
+                type:"GET",
+                url:httpUrl+"/admin/delete/"+id+"",
+                dataType:"json",
+                success:function(data){
+                    alert(data.mess);
+                    //刷新页面
+                    queryNews(queryStr,navId,subNavId);
+                    queryNewsList(queryStr,navId,subNavId,currentPage,pageSize);
+                }
+            });
+        }
+    }
+    
+function transTime(times) {
+    if(times==null){
+        return "";
+    }
+    var time = new Date(times);
+    commentTime = time.toLocaleString();
+    return commentTime;
+}
+});

@@ -1,0 +1,260 @@
+$(function () {
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    var queryStr="";
+    var type=1;
+    var $ulbrandlist = $("ul[name='brandsName']");
+    var $brandbyletter = $('.brand-list-by-letter');
+    var queryOpt={
+        brandId:0,
+        price:0,
+        level:0,
+        struct:0,
+        country:0,
+        gearBox:0,
+        seatNum:0,
+        productor:0,
+        driver:0
+    }
+
+    function getBrandList(type) {
+        if($ulbrandlist.children().length!=0){
+            $ulbrandlist.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            async:false,
+            url:httpUrl+"/car/getList/"+type,
+            success:function(res){
+                $.each(res.data,function (i,v) {
+                    if(v.cars.length!=0){
+                        $ulbrandlist.append(
+                            "<li class=\"brand-nav-item-li\">" +
+                            "<h4 class=\"factory-title\">" +
+                            "<a href=\"#\" data-brandid='"+v.brand.id+"'>"+v.brand.brandName+"</a>\n" +
+                            "</h4>" +
+                            "</li>"
+                        );
+                    }
+                })
+            },
+        })
+    };
+    getBrandList(type);
+    queryCars(type);
+    queryCarsCont(type);
+    function queryCarsCont(type) {
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            url:httpUrl+"/adminCar/getListNum/"+type,
+            success:function (res) {
+                $('.carsNum').html("共有"+res.data+"款车系");
+            }
+        })
+    }
+    function queryCars(type) {
+        if($brandbyletter.children().length!=0){
+            $brandbyletter.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            async:false,
+            url:httpUrl+"/car/getList/"+type,
+            success:function (res) {
+                $.each(res.data,function (i,v) {
+                    if(v.cars.length!=0){
+                        $brandbyletter.append(
+                            "<div class=\"brand-list-by-brand\" data-brandid='"+v.brand.id+"'>" +
+                            "<div class=\"brand-logo\">" +
+                            "<div class=\"logo-box\">" +
+                            "<div class=\"logo\"><img src='"+v.brand.iconSrc+"'/></div>" +
+                            "</div>" +
+                            "<h4 style='margin-top: 10px'>"+v.brand.brandName+"</h4>" +
+                            "</div>" +
+                            "<div class=\"brand-content\">"+
+                            "<h4 class=\"factory-title\">"+v.brand.brandName+"</h4>"+
+                            "<div class=\"factory-cars\">"+
+                            "<div class=\"salesBox\" index='"+i+"'>"+
+                            "</div>"+
+                            "</div>"+
+                            "</div>"+
+                            "</div>"
+                        )
+
+                        var $saleboxes = $(".salesBox[index='"+i+"']");
+                        for(var i =0;i<v.cars.length;i++){
+                            $saleboxes.append(
+                                "<div class=\"cars-box\">" +
+                                "<div class=\"img\"><a href=\"buycarsindex.html\" target=\"_blank\"> <img src='"+v.cars[i].iconSrc+"'/></a></div>" +
+                                "<h5 class=\"name\"><a href=\"buycarsindex.html\" target=\"_blank\">"+v.cars[i].carName+"</a></h5>" +
+                                "<h5 class=\"price\"><a href=\"buycarsindex.html\" target=\"_blank\">指导价:<span>"+v.cars[i].minPrice+"-"+v.cars[i].maxPrice+"</span></a></h5>" +
+                                "</div>"
+                            )
+                        }
+                    }
+                })
+
+            }
+        })
+    }
+    
+    function queryBrandsByStr(queryStr) {
+        if($brandbyletter.children().length!=0){
+            $brandbyletter.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            async:false,
+            url:httpUrl+"/carBrand/queryList/"+queryStr,
+            success:function(res){
+                $.each(res.data,function (i,v) {
+                    $brandbyletter.append(
+                        "<div class=\"brand-list-by-brand\" data-brandid='"+v.id+"'>" +
+                        "<div class=\"brand-logo\">" +
+                        "<div class=\"logo-box\">" +
+                        "<div class=\"logo\"><img src='"+v.iconSrc+"'/></div>" +
+                        "</div>" +
+                        "<h4>"+v.brandName+"</h4>" +
+                        "</div>" +
+                        "<div class=\"brand-content\">"+
+                        "<div class=\"factory-cars\">"+
+                        "<div class=\"salesBox\">"+
+                        "</div>"+
+                        "</div>"+
+                        "</div>" +
+                        "</div>"
+                    )
+                })
+            },
+        })
+    }
+    //取品牌ID
+    $.each($("ul[name=brandsName]").find('a'),function (i,v) {
+        $(this).click(function () {
+            queryOpt.brandId = $(this).attr('data-brandid');
+            console.log(queryOpt);
+        })
+    })
+    //取价格
+    $.each($("dl[sort='price']").find('a').not($('#submitPriceBtn')),function (i,v) {
+        $(this).click(function () {
+            queryOpt.price = $(this).attr('data-code');
+        })
+    })
+    $('#submitPriceBtn').click(function () {
+        var min = $('#minInput').val()==""?0:$('#minInput').val();
+        var max = $('#maxInput').val()==""?0:$('#maxInput').val();
+        queryOpt.price = min+"_"+max;
+    })
+
+    //各种查询
+    function queryCarsByStr(queryOpt) {
+        if($brandbyletter.children().length!=0){
+            $brandbyletter.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            async:false,
+            url:httpUrl+"/car/getListStr/"+queryOpt.brandId+"-"+queryOpt.price+"-"+queryOpt.level+"-"+queryOpt.struct+"-"+queryOpt.country+"-"+queryOpt.gearBox+"-"+queryOpt.seatNum+"-"+queryOpt.productor+"-"+queryOpt.driver,
+            success:function (res) {
+                $.each(res.data,function (i,v) {
+                    if(v.cars.length!=0){
+                        $brandbyletter.append(
+                            "<div class=\"brand-list-by-brand\" data-brandid='"+v.brand.id+"'>" +
+                            "<div class=\"brand-logo\">" +
+                            "<div class=\"logo-box\">" +
+                            "<div class=\"logo\"><img src='"+v.brand.iconSrc+"'/></div>" +
+                            "</div>" +
+                            "<h4 style='margin-top: 10px'>"+v.brand.brandName+"</h4>" +
+                            "</div>" +
+                            "<div class=\"brand-content\">"+
+                            "<h4 class=\"factory-title\">"+v.brand.brandName+"</h4>"+
+                            "<div class=\"factory-cars\">"+
+                            "<div class=\"salesBox\" index='"+i+"'>"+
+                            "</div>"+
+                            "</div>"+
+                            "</div>"+
+                            "</div>"
+                        )
+
+                        var $saleboxes = $(".salesBox[index='"+i+"']");
+                        for(var i =0;i<v.cars.length;i++){
+                            $saleboxes.append(
+                                "<div class=\"cars-box\">" +
+                                "<div class=\"img\"><a href=\"buycarsindex.html\" target=\"_blank\"> <img src='"+v.cars[i].iconSrc+"'/></a></div>" +
+                                "<h5 class=\"name\"><a href=\"buycarsindex.html\" target=\"_blank\">"+v.cars[i].carName+"</a></h5>" +
+                                "<h5 class=\"price\"><a href=\"buycarsindex.html\" target=\"_blank\">指导价:<span>"+v.cars[i].minPrice+"-"+v.cars[i].maxPrice+"</span></a></h5>" +
+                                "</div>"
+                            )
+                        }
+                    }
+                })
+
+            }
+        })
+    }
+
+    $('.sale').click(function () {
+        type=$(this).attr('isSale');
+        getBrandList(type);
+        queryCars(type);
+        queryCarsCont(type);
+    })
+    $('.notsale').click(function () {
+        type=$(this).attr('isSale');
+        getBrandList(type);
+        queryCars(type);
+        queryCarsCont(type);
+    })
+    $('.stopsale').click(function () {
+        type=$(this).attr('isSale');
+        getBrandList(type);
+        queryCars(type);
+        queryCarsCont(type);
+    })
+    $('.notsale').click(function () {
+        type=$(this).attr('isSale');
+        getBrandList(type);
+        queryCars(type);
+        queryCarsCont(type);
+    })
+
+
+    $("a[name='folder']").click(function () {
+        //console.log( $('.OdCarConditionContainer').attr('style'))
+        if($('.OdCarConditionContainer').attr('isfolde') == "false"){
+            $('.OdCarConditionContainer').attr('style','display:none');
+            $('.OdCarConditionContainer').attr('isfolde','true');
+            $("a[name='folder']").find('em').html("展开筛选条件")
+        }else if($('.OdCarConditionContainer').attr('isfolde')=="true"){
+            $('.OdCarConditionContainer').attr('style','display: block');
+            $('.OdCarConditionContainer').attr('isfolde','false');
+            $("a[name='folder']").find('em').html("收起筛选条件")
+        }
+    });
+
+    var $links = $('.OdCarCondition dd a');
+    $.each($links,function (i,v) {
+        $(this).click(function () {
+            $(this).parent().parent().find('a').attr('class','btn');
+            $(this).attr('class','btn active');
+        })
+    })
+
+    $('#inputSearch').click(function () {
+        queryStr = $('.s_input').val();
+        //queryBrandsByStr(queryStr);
+    });
+
+    $(".s_input").keydown(function() {
+        // console.log(e.keyCode);
+        if (event.keyCode == "13") {
+            queryStr = $('.s_input').val();
+           // queryBrandsByStr(queryStr);
+        }
+    })
+})

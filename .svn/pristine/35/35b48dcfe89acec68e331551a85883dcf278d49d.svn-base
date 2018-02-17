@@ -1,0 +1,27 @@
+$(function () {
+    var httpUrl = "http://www.wxlovezy.top:8080/spring";
+    var $articleHead = $('.articleHead');
+    var $articleContent = $('.articlephases');
+    var newId = $.cookie('id');
+    Date.prototype.toLocaleString = function() {
+        return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+    };
+    if(newId!=null){
+        //文章内容
+        $.ajax({
+            type:"GET",
+            url:httpUrl+"/news/cont/"+newId+"",
+            dataType:"json",
+            success:function (res) {
+                    var time;
+                    if(res.data.publishTime==null){time=""}else{var timestamp = new Date(res.data.publishTime.time);time=timestamp.toLocaleString();}
+                    $articleHead.append(
+                        "<h1>"+res.data.title+"</h1><div><span>"+time+"</span><span>作者: "+res.data.author+"</span></div>"
+                    );
+                    $articleContent.append(
+                        res.data.content
+                    );
+            }
+        })
+    }
+});

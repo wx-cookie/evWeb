@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="head">
+    <div class="wrap">
+        <div class="logo">
+            <a href="#">
+                <img src="../images/LOGO.png"/>
+            </a>
+        </div>
+        <p class="logo_p">云南省新能源汽车信息平台</p>
+
+        <div class="option">
+            <ul>
+                <li id="option_li_search">
+                    <div class="search">
+                        <form>
+                            <input type="button" class="s_sub" id="inputSearch"/>
+                            <input type="text" class="s_input" placeholder="请输入关键词"/>
+                        </form>
+                    </div>
+                </li>
+                <li><a href="#" class="option_a">登陆</a></li>
+                <li><a href="#" class="option_a">注册</a></li>
+                <li><a href="#" class="option_a">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="wrap" style="overflow:hidden">
+    <div class="picinfo-wrapper">
+        <div class="picinfo-main">
+            <a class="prev-pic-btn"></a>
+            <img src="../images/adA6jk.jpg"/>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

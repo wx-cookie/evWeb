@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head></head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>文章发布-发布</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+<!--[if lte IE 8]>
+<link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+<body style="background: rgb(246, 245, 250);">
+<!--content S-->
+<div class="super-content">
+
+    <div class="superCtab">
+        <div class="publishArt">
+            <h4>评论管理</h4>
+            <div class="pubMain">
+                <a href="#" class="backlistBtn"><i class="ico-back"></i>返回列表</a>
+                <form action="" method="post">
+                    <h5 class="pubtitle">文章标题</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="newsTitle" readonly>
+                    </div>
+                    <h5 class="pubtitle">用户</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="userName" readonly>
+                    </div>
+                    <h5 class="pubtitle">文章评论</h5>
+                    <div class="pub-area-bar">
+                        <textarea  rows="" cols="3" name="comment"></textarea>
+                    </div>
+
+                    <h5 class="pubtitle">回复内容</h5>
+                    <div class="pub-area-bar">
+                        <textarea  rows="" cols="3" name="replay"></textarea>
+                    </div>
+                    <div class="commentoption" style="margin-top: 30px;overflow: hidden">
+                        <div class="pub-btn" style="padding: 0px;float: left">
+                            <input type="button" id="replay" value="回复" class="saveBtn">
+                        </div>
+                        <div class="pub-btn" style="padding: 0px;float: left;margin-left: 40px">
+                            <input type="button" id="showComment" value="显示评论" class="saveBtn">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/commentpublish.js"></script>
+</body></html>

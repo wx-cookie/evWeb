@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文章发布</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/page.css">
+    <!--[if lte IE 8]>
+    <link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--  <script type="text/javascript" src="js/main.js"></script>-->
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background: #f6f5fa;">
+
+<!--content S-->
+<div class="super-content RightMain" id="RightMain">
+
+    <!--header-->
+    <div class="superCtab">
+        <div class="ctab-title clearfix">
+            <h3>车系管理</h3>
+        </div>
+
+        <div class="ctab-Main">
+            <div class="ctab-Main-title">
+                <ul class="clearfix" id="indexul">
+                    <li><a href="carsale.html" isSale="1">在售</a></li>
+                    <li  class="cur"><a href="carnotsale.html" isSale="2">未售</a></li>
+                    <li><a href="carstopsale.html" isSale="3">停售</a></li>
+                </ul>
+            </div>
+
+            <div class="ctab-Mian-cont">
+                <div class="ctabpublish"><a href="#" class="greenbtn publish" id="publishNew">发布车系</a></div>
+                <div class="Mian-cont-btn clearfix">
+                    <div class="searchBar">
+                        <input type="text" id="search" class="form-control srhTxt" placeholder="输入标题关键字搜索">
+                        <input type="button" class="srhBtn" id="searchBtn">
+                    </div>
+                </div>
+
+                <div class="Mian-cont-wrap">
+                    <div class="defaultTab-T">
+                        <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
+                            <tbody><tr><td class="car_1">车系名称</td><td class="car_2">价格区间</td><td class="car_3">级别</td><td class="car_4">车身结构</td><td class="car_5">国别</td><td class="car_6">座位数</td><td class="car_7">变速箱</td><td class="car_8">生产厂家</td><td class="car_9">驱动方式</td><td class="car_10">操作</td></tr>
+                            </tbody></table>
+                    </div>
+                    <table border="0" cellspacing="0" cellpadding="0" class="defaultTable defaultTable2">
+                        <tbody id="carsLists">
+                        </tbody></table>
+                    <!--pages S-->
+                    <div class="pageSelect">
+                        <span>共 <b class="totalNews"></b> 条 每页 <b class="pageSize">10 </b>条  当前<b class="currentPage">1</b>/ 共<b class="totalPages"></b>页</span>
+                        <div class="pageWrap">
+                            <a class="pagePre"><i class="ico-pre">&nbsp;</i></a>
+                            <a href="#" class="pagenext"><i class="ico-next">&nbsp;</i></a>
+                        </div>
+                    </div>
+                    <!--pages E-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--main-->
+
+</div>
+<!--content E-->
+<script type="text/javascript" src="js/carmanagement.js"></script>
+</body></html>

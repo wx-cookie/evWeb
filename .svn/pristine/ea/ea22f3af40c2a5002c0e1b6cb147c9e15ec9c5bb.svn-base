@@ -1,0 +1,68 @@
+$(function () {
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    var navId;
+    var subNavId=0;
+    var pageSize = 10;
+    var currentPage = 1;
+    var queryStr="";
+    //
+    Date.prototype.toLocaleString = function() {
+        return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+    };
+    //取一级导航
+    var $lis = $('.nav ul li');
+    $.each($lis,function (i,v) {
+            if($(this).hasClass('active')){
+                //存index的值
+                navId = $(this).attr('data-index');
+                //subNavId = 0;
+                var $li_a = $('.navrj').find('a');
+                $.each($li_a,function () {
+                    if($(this).hasClass('subactive')){
+                        subNavId = $(this).attr('data-subindex');
+                    }
+                })
+            }
+
+    });
+    queryNews(queryStr,navId,subNavId,currentPage,pageSize);
+
+    function queryNews(queryStr,navId,subId,currentPage,pageSize) {
+        var url;
+        if(queryStr == ""){
+            url=httpUrl+"/news/list/"+navId+"/"+subId+"/"+currentPage+"/"+pageSize+"";
+        }else{
+            url=httpUrl+"/news/query/"+queryStr+"/"+navId+"/"+subId+"/"+currentPage+"/"+pageSize+"";
+        }
+        var $ulLists = $('.articlelist');
+        if($ulLists.children().length!=0){
+            $ulLists.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            timeout:10000,
+            dataType:"json",
+            async:false,
+            url:url,
+            success:function (res) {
+                $.each(res.data,function (i,v) {
+                    var timestamp = new Date(v.publishTime.time);
+                    $ulLists.append(
+                        "<li>" +
+                        "<span>"+timestamp.toLocaleString()+"</span>" +
+                        "<a href='detail.html' data-id='"+v.id+"'>"+v.title+"</a>" +
+                        "</li>"
+                    )
+                })
+            }
+        })
+    }
+    
+    function queryNewsCount() {
+        
+    }
+    $('#inputSearch').click(function () {
+        queryStr = $('.s_input').val();
+        queryNews(queryStr,navId,subNavId,currentPage,pageSize);
+    })
+});

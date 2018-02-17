@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>文章发布</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/page.css">
+	<!--[if lte IE 8]>
+	<link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<!--[if IE]>
+	<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body style="background: #f6f5fa;">
+
+<!--content S-->
+<div class="super-content RightMain" id="RightMain">
+
+	<!--header-->
+	<div class="superCtab">
+		<div class="ctab-title clearfix">
+			<h3>文章发布</h3>
+
+			<a href="wenzhang_xinwen_fabu.html" class="greenbtn publish" id="publishNew">发布文章</a>
+
+		</div>
+
+		<div class="ctab-Main">
+			<div class="ctab-Main-title">
+				<ul class="clearfix" id="indexul">
+					<li><a href="wenzhang_shouye.html" idx="1">首页</a></li>
+					<li><a href="wenzhang_hangyedongtai.html" idx="2">行业动态</a>
+					</li>
+					<li class="cur"><a href="wenzhang_chongdian.html" idx="3">充电桩地图</a></li>
+					<li><a href="wenzhang_gouchezhinan.html" idx="4">购车指南</a>
+					</li>
+					<li><a href="wenzhang_yongchezhinan.html" idx="5">用车指南</a></li>
+					<li><a href="wenzhang_kepuzhishi.html" idx="6">科普知识</a></li>
+					<li><a href="wenzhang_jishuziliao.html" idx="7">技术资料</a></li>
+				</ul>
+			</div>
+
+			<div class="ctab-Mian-cont">
+				<div class="Mian-cont-btn clearfix">
+					<div class="searchBar">
+						<input type="text" id="search" class="form-control srhTxt" placeholder="输入标题关键字搜索">
+						<input type="button" class="srhBtn" id="searchBtn">
+					</div>
+				</div>
+
+				<div class="Mian-cont-wrap">
+					<div class="defaultTab-T">
+						<table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
+							<tbody><tr><th class="t_1">文章ID</th><th class="t_2">文章标题</th><th class="t_3">首页</th><th class="t_4">轮播图</th><th class="t_5">状态</th><th class="t_6">发布时间</th><th class="t_7">操作</th></tr>
+							</tbody></table>
+					</div>
+					<table border="0" cellspacing="0" cellpadding="0" class="defaultTable defaultTable2">
+						<tbody id="newsLists">
+						</tbody></table>
+					<!--pages S-->
+					<div class="pageSelect">
+						<span>共 <b class="totalNews"></b> 条 每页 <b class="pageSize">10 </b>条  当前<b class="currentPage">1</b>/ 共<b class="totalPages"></b>页</span>
+						<div class="pageWrap">
+							<a class="pagePre"><i class="ico-pre">&nbsp;</i></a>
+							<a href="#" class="pagenext"><i class="ico-next">&nbsp;</i></a>
+						</div>
+					</div>
+					<!--pages E-->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--main-->
+
+</div>
+<!--content E-->
+<script type="text/javascript" src="js/newsmanagement.js"></script>
+</body></html>

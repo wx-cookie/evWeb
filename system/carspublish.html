@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head></head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>文章发布-发布</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+<!--[if lte IE 8]>
+<link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+<body style="background: rgb(246, 245, 250);">
+<!--content S-->
+<div class="super-content">
+
+    <div class="superCtab">
+        <div class="publishArt">
+            <h4>评论管理</h4>
+            <div class="pubMain">
+                <form action="" method="post">
+                    <h5 class="pubtitle">选择品牌</h5>
+                    <div class="pubselect">
+							<!--<span class="select_ui">--><!--<span class="select_text_ui" style="min-width: 6em;">请选择分类</span>--><b class="select_arrow"></b>
+								<select  class="brandSelect select_ui" style="height: 38px">
+							</select><!--</span>-->
+                    </div>
+                    <h5 class="pubtitle">车系名称</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="carName">
+                    </div>
+                    <h5 class="pubtitle">最低价</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="minPrice">
+                    </div>
+                    <h5 class="pubtitle">最高价</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="maxPrice">
+                    </div>
+                    <h5 class="pubtitle">排序</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="idx">
+                    </div>
+                    <h5 class="pubtitle level">
+                        轿车：&nbsp;&nbsp;<!--<span class="select_ui">--><span class="select_text_ui" style="min-width: 6em;"></span><b class="select_arrow"></b>
+								<select  class="littleCar select_ui" style="height: 38px" id="littleCar">
+                                    <option value="none">无</option>
+                                    <option value="11">微型车</option>
+                                    <option value="12">小型车</option>
+                                    <option value="13">紧凑型车</option>
+                                    <option value="14">中型车</option>
+                                    <option value="15">中大型车</option>
+                                    <option value="16">大型车</option>
+							</select>
+                        <!--</span>-->
+                        SUV：&nbsp;&nbsp;<!--<span class="select_ui">--><span class="select_text_ui" style="min-width: 6em;"></span><b class="select_arrow"></b>
+								<select  class="SUV select_ui" style="height: 38px" id="SUV">
+                                    <option value="none">无</option>
+                                    <option value="21">小型SUV</option>
+                                    <option value="22">紧凑SUV</option>
+                                    <option value="23">中型SUV</option>
+                                    <option value="24">中大SUV</option>
+                                    <option value="25">大型SUV</option>
+							</select>
+                       <!-- </span>-->
+                        卡车:&nbsp;&nbsp;<!--<span class="select_ui">--><span class="select_text_ui" style="min-width: 6em;"></span><b class="select_arrow"></b>
+								<select  class="trunk select_ui" style="height: 38px" id="trunk">
+                                    <option value="none">无</option>
+                                    <option value="71">微卡</option>
+                                    <option value="72">皮卡</option>
+							</select>
+                        <!--</span>-->&nbsp;&nbsp;
+                        <input name="level" type="radio" value="3"/>MPV&nbsp;&nbsp;
+                        <input name="level" type="radio" value="4"/>跑车&nbsp;&nbsp;
+                        <input name="level" type="radio" value="5"/>微面&nbsp;&nbsp;
+                        <input name="level" type="radio" value="6"/>轻客
+                    </h5>
+                   <h5 class="pubtitle struct">车身结构:&nbsp;&nbsp;
+					<input name="struct" type="radio" value="1"/>两厢&nbsp;&nbsp;
+					<input name="struct" type="radio" value="2"/>三厢&nbsp;&nbsp;
+					<input name="struct" type="radio" value="3"/>掀背&nbsp;&nbsp;
+					<input name="struct" type="radio" value="4"/>旅行车&nbsp;&nbsp;
+					<input name="struct" type="radio" value="5"/>硬顶敞篷&nbsp;&nbsp;
+					<input name="struct" type="radio" value="6"/>软顶敞篷&nbsp;&nbsp;
+					<input name="struct" type="radio" value="7"/>硬顶跑车
+				   </h5>
+				   <h5 class="pubtitle country">国别:&nbsp;&nbsp;
+					<input name="country" type="radio" value="1"/>中国&nbsp;&nbsp;
+					<input name="country" type="radio" value="2"/>德国&nbsp;&nbsp;
+					<input name="country" type="radio" value="3"/>日本&nbsp;&nbsp;
+					<input name="country" type="radio" value="4"/>美国&nbsp;&nbsp;
+					<input name="country" type="radio" value="5"/>韩国&nbsp;&nbsp;
+					<input name="country" type="radio" value="6"/>法国&nbsp;&nbsp;
+					<input name="country" type="radio" value="7"/>英国&nbsp;&nbsp;
+					<input name="country" type="radio" value="8"/>其他
+				   </h5>
+				   <h5 class="pubtitle gearBox">变速箱:&nbsp;&nbsp;
+					<input name="gearBox" type="radio" value="1"/>手动&nbsp;&nbsp;
+					<input name="gearBox" type="radio" value="2"/>自动
+				   </h5>
+				   <h5 class="pubtitle seatNum">座位数:&nbsp;&nbsp;
+					<input name="seatNum" type="radio" value="1"/>2座&nbsp;&nbsp;
+					<input name="seatNum" type="radio" value="2"/>4座&nbsp;&nbsp;
+					<input name="seatNum" type="radio" value="3"/>5座&nbsp;&nbsp;
+					<input name="seatNum" type="radio" value="4"/>6座&nbsp;&nbsp;
+					<input name="seatNum" type="radio" value="5"/>7座&nbsp;&nbsp;
+					<input name="seatNum" type="radio" value="6"/>7座以上
+				   </h5>
+				   <h5 class="pubtitle productor">生产厂商:&nbsp;&nbsp;
+					<input name="productor" type="radio" value="1"/>自主&nbsp;&nbsp;
+					<input name="productor" type="radio" value="2"/>合资&nbsp;&nbsp;
+					<input name="productor" type="radio" value="3"/>进口
+				   </h5>
+				   <h5 class="pubtitle driver">驱动方式:&nbsp;&nbsp;
+					<input name="driver" type="radio" value="1"/>前驱&nbsp;&nbsp;
+					<input name="driver" type="radio" value="2"/>后驱&nbsp;&nbsp;
+					<input name="driver" type="radio" value="3"/>四驱
+				   </h5>
+                    <h5 class="pubtitle">汽车配图</h5>
+                    <div class="Thumbnails clearfix">
+                        <div class="Thumblistbg upload-img" style="width:180px;height: 135px">
+                            <input id="cariconImage" type="file" size="30" name="fileselect[]" multiple>
+                            <img src=""/>
+                            <a href="javascript:;" class="Thumbbtn" ><i class="ico-download"></i>上传图片</a>
+                        </div>
+                        <span>建议上传宽度为180px,高度为135px的图片(宽高比为2:1)</span>
+                    </div>
+                    <div class="commentoption" style="margin-top: 30px;overflow: hidden">
+                        <div class="pub-btn" style="padding: 0px;float: left">
+                            <input type="button" id="add" value="添加" class="saveBtn">
+                        </div>
+                        <div class="pub-btn" style="padding: 0px;float: left;margin-left: 40px">
+                            <a href="#"><span style="margin-top: 10px;display: block;">返回列表</span></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/carspublish.js"></script>
+</body></html>

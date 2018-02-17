@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文章发布</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/page.css">
+    <!--[if lte IE 8]>
+    <link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background: #f6f5fa;">
+
+<!--content S-->
+<div class="super-content RightMain" id="RightMain">
+
+    <!--header-->
+    <div class="superCtab">
+        <div class="ctab-title clearfix">
+            <h3>评论列表</h3>
+
+        </div>
+
+        <div class="ctab-Main">
+
+            <div class="ctab-Mian-cont">
+                <div class="Mian-cont-btn clearfix">
+
+                </div>
+
+                <div class="Mian-cont-wrap">
+                    <div class="defaultTab-T">
+                        <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
+                            <tbody><tr><td class="c_1">评论ID</td><td class="c_2">用户</td><td class="c_3">新闻标题</td><td class="c_4">评论内容</td><td class="c_5">回复内容</td><td class="c_6">评论时间</td><td class="c_7">是否显示</td><td class="c_8">操作</td></tr>
+                            </tbody></table>
+                    </div>
+                    <table border="0" cellspacing="0" cellpadding="0" class="defaultTable defaultTable2">
+                        <tbody id="commentLists">
+
+                        </tbody></table>
+                    <!--pages S-->
+                    <div class="pageSelect">
+                        <span>共 <b class="totalNews"></b> 条 每页 <b class="pageSize"> </b>条  当前<b class="currentPage">1</b>/ 共<b class="totalPages"></b>页</span>
+                        <div class="pageWrap">
+                            <a class="pagePre"><i class="ico-pre">&nbsp;</i></a>
+                            <a href="#" class="pagenext"><i class="ico-next">&nbsp;</i></a>
+                        </div>
+                    </div>
+                    <!--pages E-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--main-->
+
+</div>
+<!--content E-->
+<script type="text/javascript" src="js/commentLists.js"></script>
+</body></html>

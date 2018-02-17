@@ -1,0 +1,294 @@
+﻿<html>
+<head>
+<link href="../css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+	<div class="logo">
+			<a href="#">
+			<img src="../images/LOGO.png"/>
+			</a>
+		</div>
+		<p class="logo_p">云南省新能源汽车信息平台</p>
+		
+		<div class="option">
+		<ul>
+		<li id="option_li_search">
+		<div class="search">
+		<form>
+			<input type="button" class="s_sub" id="inputSearch"/>
+			<input type="text" class="s_input" placeholder="请输入关键词"/>
+		</form>
+		</div>				
+		</li>
+			<li><a href="#" class="option_a">登陆</a></li>
+			<li><a href="#" class="option_a">注册</a></li>
+			<li><a href="#" class="option_a">帮助</a></li>
+		</ul>	
+		</div>
+	</div>		
+</div>
+<div class="wrap" style="overflow:hidden;">
+	<div class="main" style="width:1250px;">
+		<div class="car-side">
+			<div class="side fixed">
+				<div class="brand-nav-box">
+					<ul>
+						<dl>
+							<dd>
+								<ul name="brandsName">
+
+								</ul>
+							</dd>
+						</dl>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="car-container">
+			<div class="condition-box">
+				<div id="condition-box">
+					<div class="OdCarConditionContainer" isfolde="false">
+						<dl class="OdCarCondition" sort="price">
+							<dt>价格：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd>
+								<a class="btn" href="#" data-code="0_5"><span style="display:inline-block;line-height:28px;text-align:center;">5万以内</span></a>
+								<a class="btn" href="#" data-code="5_10"><span style="display:inline-block;line-height:28px;text-align:center;">5-10万</span></a>
+								<a class="btn" href="#" data-code="10_15"><span style="display:inline-block;line-height:28px;text-align:center;">10-15万</span></a>
+								<a class="btn" href="#" data-code="15_20"><span style="display:inline-block;line-height:28px;text-align:center;">15-20万</span></a>
+								<a class="btn" href="#" data-code="20_30"><span style="display:inline-block;line-height:28px;text-align:center;">20-30万</span></a>
+								<a class="btn" href="#" data-code="30_45"><span style="display:inline-block;line-height:28px;text-align:center;">30-40万</span></a>
+								<a class="btn" href="#" data-code="40_50"><span style="display:inline-block;line-height:28px;text-align:center;">40-50万</span></a>
+								<a class="btn" href="#" data-code="50_75"><span style="display:inline-block;line-height:28px;text-align:center;">50-70万</span></a>
+								<a class="btn" href="#" data-code="70_100"><span style="display:inline-block;line-height:28px;text-align:center;">70-100万</span></a>
+								<a class="btn" href="#" data-code="100_0"><span style="display:inline-block;line-height:28px;text-align:center;">100万以上</span></a>
+								<div class="custom-price">
+									<input class="price-input" type="text" id="minInput"/>
+									<em>-</em>
+									<input class="price-input" type="text" id="maxInput"/>
+									<a href="#" class="submit-price-btn" id="submitPriceBtn">确定</a>
+								</div> 
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						
+						<dl class="OdCarCondition" sort="level">
+							<dt>级别：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd>
+								<a class="btn multi" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="">轿车</span><i class="multi-arrow"></i>
+									<div class="small-cate-box">
+										<ul class="small-cate">
+											<li><span class="small-cate-item" data-code="1">全部轿车</span></li>
+											<li><span class="small-cate-item"  data-code="11">微型车</span></li>
+											<li><span class="small-cate-item" data-code="12">小型车</span></li>
+											<li><span class="small-cate-item" data-code="13">紧凑型车</span></li>
+											<li><span class="small-cate-item" data-code="14">中型车</span></li>
+											<li><span class="small-cate-item" data-code="15">中大型车</span></li>
+											<li><span class="small-cate-item" data-code="16">大型车</span></li>
+										</ul>
+									</div>
+								</a>
+								<a class="btn multi" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="" >SUV</span><i class="multi-arrow"></i>
+									<div class="small-cate-box">
+										<ul class="small-cate">
+											<li><span class="small-cate-item" data-code="2">全部SUV</span></li>
+											<li><span class="small-cate-item" data-code="21">小型SUV</span></li>
+											<li><span class="small-cate-item" data-code="22">紧凑SUV</span></li>
+											<li><span class="small-cate-item" data-code="23">中型SUV</span></li>
+											<li><span class="small-cate-item" data-code="24">中大SUV</span></li>
+											<li><span class="small-cate-item"  data-code="25">大型SUV</span></li>
+										</ul>
+									</div>
+								</a>
+								<a class="btn" href="#" data-code="3"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="" >MPV</span><i class="multi-arrow"></i></a>
+								
+								<a class="btn" href="#" data-code="4"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="" >跑车</span><i class="multi-arrow"></i>
+									
+								</a>
+								<a class="btn" href="#" data-code="5"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="" >微面</span><i class="multi-arrow"></i>
+									
+								</a>
+								<a class="btn" href="#" data-code="6"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="" >轻客</span><i class="multi-arrow"></i>
+									
+								</a>
+								<a class="btn multi" href="#" data-code="7"><span style="display:inline-block;line-height:28px;text-align:center;" onclick="" >卡车</span><i class="multi-arrow"></i>
+									<div class="small-cate-box">
+										<ul class="small-cate">
+											<li><span class="small-cate-item" data-code="7">全部卡车</span></li>
+											<li><span class="small-cate-item" data-code="71">微卡</span></li>
+											<li><span class="small-cate-item"  data-code="72">皮卡</span></li>
+										
+										</ul>
+									</div>
+								</a>
+								
+								
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition" sort="struct">
+							<dt>车身结构：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd>
+								<a class="btn" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;" >两厢</span></a>
+								<a class="btn" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;" >三厢</span></a>
+								<a class="btn" href="#" data-code="3"><span style="display:inline-block;line-height:28px;text-align:center;" >掀背</span></a>
+								<a class="btn" href="#" data-code="4"><span style="display:inline-block;line-height:28px;text-align:center;" >旅行车</span></a>
+								<a class="btn" href="#"  data-code="5"><span style="display:inline-block;line-height:28px;text-align:center;">硬顶敞篷</span></a>
+								<a class="btn" href="#" data-code="6"><span style="display:inline-block;line-height:28px;text-align:center;">软顶敞篷</span></a>
+								<a class="btn" href="#" data-code="7"><span style="display:inline-block;line-height:28px;text-align:center;">硬顶跑车</span></a>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition" sort="country">
+							<dt>国别：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd>
+								<a class="btn" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;">中国</span></a>
+								<a class="btn" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;">德国</span></a>
+								<a class="btn" href="#" data-code="3"><span style="display:inline-block;line-height:28px;text-align:center;">日本</span></a>
+								<a class="btn" href="#" data-code="4"><span style="display:inline-block;line-height:28px;text-align:center;">美国</span></a>
+								<a class="btn" href="#" data-code="5"><span style="display:inline-block;line-height:28px;text-align:center;">韩国</span></a>
+								<a class="btn" href="#" data-code="6"><span style="display:inline-block;line-height:28px;text-align:center;">法国</span></a>
+								<a class="btn" href="#" data-code="7"><span style="display:inline-block;line-height:28px;text-align:center;">英国</span></a>
+								<a class="btn" href="#" data-code="8"><span style="display:inline-block;line-height:28px;text-align:center;">其它</span></a>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition" sort="gearBox">
+							<dt>变速箱:</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd style="width:500px;">
+								<a class="btn" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;">手动</span></a>
+								<a class="btn" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;">自动</span></a>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition" sort="seatNum">
+							<dt>座位数：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd style="width:500px;">
+								<a class="btn" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;">2座</span></a>
+								<a class="btn" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;">4座</span></a>
+								<a class="btn" href="#" data-code="3"><span style="display:inline-block;line-height:28px;text-align:center;">5座</span></a>
+								<a class="btn" href="#" data-code="4"><span style="display:inline-block;line-height:28px;text-align:center;">6座</span></a>
+								<a class="btn" href="#" data-code="5"><span style="display:inline-block;line-height:28px;text-align:center;">7座</span></a>
+								<a class="btn" href="#" data-code="6"><span style="display:inline-block;line-height:28px;text-align:center;">7座以上</span></a>
+							
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition" sort="productor">
+							<dt>生产厂商：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd>
+								<a class="btn" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;">自主</span></a>
+								<a class="btn" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;">合资</span></a>
+								<a class="btn" href="#" data-code="3"><span style="display:inline-block;line-height:28px;text-align:center;">进口</span></a>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition" sort="driver">
+							<dt>驱动方式：</dt>
+							<dd><a class="btn active" href="#" style="width:30px" data-code="0">不限</a></dd>
+							<dd style="width:500px;">
+								<a class="btn" href="#" data-code="1"><span style="display:inline-block;line-height:28px;text-align:center;">前驱</span></a>
+								<a class="btn" href="#" data-code="2"><span style="display:inline-block;line-height:28px;text-align:center;">后驱</span></a>
+								<a class="btn" href="#" data-code="3"><span style="display:inline-block;line-height:28px;text-align:center;">四驱</span></a>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition">
+							<dt>气缸数：</dt>
+							<dd><a class="btn active" href="#" style="width:30px">不限</a></dd>
+							<dd>
+								<a class="btn" href="#"><span style="display:inline-block;line-height:28px;text-align:center;">3缸</span></a>
+								<a class="btn" href="#"><span style="display:inline-block;line-height:28px;text-align:center;">4缸</span></a>
+								<a class="btn" href="#"><span style="display:inline-block;line-height:28px;text-align:center;">5缸</span></a>
+								<a class="btn" href="#"><span style="display:inline-block;line-height:28px;text-align:center;">6缸</span></a>
+								<a class="btn" href="#"><span style="display:inline-block;line-height:28px;text-align:center;">8缸及以上</span></a>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<dl class="OdCarCondition">
+							<dt>配置：</dt>
+							<dd><a class="btn active" href="#" style="width:30px">不限</a></dd>
+							<dd>
+								<span class="sp cfg"><label><input type="checkbox"/><span>倒车雷达</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>电动天窗</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>真皮座椅</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>定速巡航</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>ESP稳定系统</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>座椅电动调节</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>氙气/LED/激光</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>座椅加热</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>倒车影像</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>自动空调</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>感应雨刷</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>全景天窗</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>胎压监测</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>GPS导航</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>蓝牙/车载电话</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>多功能方向盘</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>无钥匙进入</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>电动后备箱</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>座椅通风</span></label></span>
+								<span class="sp cfg"><label><input type="checkbox"/><span>方向盘加热</span></label></span>
+							</dd>
+						</dl>
+						<div style="width:100%;border-top:1px solid #e9e9e9"></div>
+						<!--如果有标签-->
+						<div class="conditionLabelBox">
+							<div style="display:table;padding-bottom:10px;">
+								<div style="display:table-cell;height:28px;line-height:28px;margin:10px 5px 0px 0px;width:60px;">所选条件</div>
+								<div style="display:table-cell;">
+									<a class="conditionLabel" onclick="">座椅电动调节<i>x</i></a>
+									<a class="conditionLabel" onclick="">全景天窗<i>x</i></a>
+									<span style="display:inline-block;margin-left:10px;">共44个车系</span>
+									<a style="display:inline-block;color:#e12c2c;margin-left:10px;" href="#">清除所有</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="conditionBottom">
+						<a class="folderBtn active" href="#" name="folder">
+							<em>收起筛选条件</em>
+						</a>
+						<span><span class="carsNum" style="float: left">XXX</span><a href="#" class="sale" isSale="1">在售</a>/<a href="#" class="stopsale" isSale="3">停售</a>/<a href="#" class="notsale" isSale="2">未售</a>车系</span>
+					</div>
+				</div>
+				<div class="condition-line"></div>
+			</div>
+			<div id="brand-box">
+			<div class="brand-list-box">
+				<div class="brand-list-by-letter">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--品牌车系-->
+		
+	</div>
+<div class="foot">
+
+	<div class="footinfo">
+		<div><a href="#">关于我们</a></div>
+		<div><a href="#">联系我们</a></div>
+		<div><a href="#">加入我们</a></div>
+		<div><a href="#">法律声明</a></div>
+		<div><a href="#">网站导航</a></div>
+		<div><a href="#">意见反馈</a></div>
+		</div>
+	<div class="copyright"><span>云南省新能源汽车信息平台</span></div>
+
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/carBrands.js"></script>
+</html>

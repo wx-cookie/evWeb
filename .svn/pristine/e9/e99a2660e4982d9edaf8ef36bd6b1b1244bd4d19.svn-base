@@ -1,0 +1,281 @@
+
+$(function () {
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    var navId;
+    var subNavId=0;
+    var pageSize = 10;
+    var currentPage = 1;
+    var queryStr="";
+    var $ulLists = $('.articlelist');
+    var $news = $('.news');
+    //
+    Date.prototype.toLocaleString = function() {
+        return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+    };
+    //取一级导航
+    var $lis = $('.nav ul li');
+    $.each($lis,function (i,v) {
+            if($(this).hasClass('active')){
+                //存index的值
+                navId = $(this).attr('data-index');
+                var $li_a = $('.navrj').find('a');
+                $.each($li_a,function () {
+                    if($(this).hasClass('subactive')){
+                        subNavId = $(this).attr('data-subindex');
+                    }
+                })
+            }
+    });
+    getLbImages(navId,subNavId);
+    queryNews(queryStr,navId,subNavId,currentPage,pageSize);
+
+    function queryNews(queryStr,navId,subId,currentPage,pageSize) {
+        var url;
+        if(queryStr == ""){
+            url=httpUrl+"/news/list/"+navId+"/"+subId+"/"+currentPage+"/"+pageSize+"";
+        }else{
+            url=httpUrl+"/news/query/"+queryStr+"/"+navId+"/"+subId+"/"+currentPage+"/"+pageSize+"";
+        }
+
+            //显示首页内容
+           if($news.children().length!=0){
+               $news.children().remove();
+           }
+            $.ajax({
+                type:"GET",
+                timeout:10000,
+                dataType:"json",
+                async:false,
+                url:url,
+                success:function (res) {
+                    $.each(res.data,function (i,v) {
+                        var timestamp = new Date(v.publishTime.time);
+                        var upNum = v.npNum==null?0:v.npNum;
+                        var visit = v.visitNum == null?0:v.visitNum;
+                        //首页没有新闻配图
+                        if(v.iconSrc==""){
+                            $('.news').append(
+                                "<dl class='newsList'>" +
+                                "<dt><a class='title' href='#' data-id='"+v.id+"' title='"+v.title+"'>"+v.title+"</a></dt>" +
+                                "<dd class='title_date' style='margin:20px 0 0 20px;float:left;'><span class='newsdate'>"+timestamp.toLocaleString()+"</span></dd>" +
+                                "<dd class='title_comment' style='margin:20px 40 0 20px;float:right;'><span class='newsthumup'>点赞&nbsp;"+upNum+"&nbsp;&nbsp;浏览&nbsp;"+visit+"</span></dd>" +
+                                "</dl>"
+                            )
+                        }else{
+                            $('.news').append(
+                                "<dl class='newsLists'>" +
+                                "<dt>" +
+                                "<a href='#' data-id='"+v.id+"'><img src='"+v.iconSrc+"' style='width:400px;height:210px;border-radius:8px' alt='"+v.title+"' title='"+v.title+"'></a>" +
+                                "</dt>"+
+                                "<dd>" +
+                                "<p class='newstitle'><a href='#' data-id='"+v.id+"' title='"+v.title+"'>"+v.title+"</a></p>" +
+                                "<div class='newscontent'>"+v.summary+"</div>" +
+                                "<div class='newscomment'>" +
+                                "<span class='newsdate'>"+timestamp.toLocaleString()+"</span>" +
+                                "<span class='newsthumup'>点赞&nbsp;"+upNum+"&nbsp;&nbsp;浏览&nbsp;"+visit+"</span>" +
+                                "</div>" +
+                                "</dd>" +
+                                "</dl>"
+                            )
+                        }
+                    })
+                }
+            });
+            //显示其他
+           if($ulLists.children().length!=0){
+               $ulLists.children().remove();
+           }
+            $.ajax({
+                type:"GET",
+                timeout:10000,
+                dataType:"json",
+                async:false,
+                url:url,
+                success:function (res) {
+                    $.each(res.data,function (i,v) {
+                        var timestamp = new Date(v.publishTime.time);
+                        $ulLists.append(
+                            "<li>" +
+                            "<span>"+timestamp.toLocaleString()+"</span>" +
+                            "<a href='#' data-id='"+v.id+"' title='"+v.title+"'>"+v.title+"</a>" +
+                            "</li>"
+                        )
+                    })
+                }
+            });
+
+        reachDataid();
+    }
+    
+    function queryNewsCount(queryStr,navId,subNavId) {
+        var url;
+        var totalNews;
+        if(queryStr == ""){
+            url = httpUrl+"/news/count/"+navId+"/"+subNavId+"";
+        }else{
+            url = httpUrl+"/news/count/"+queryStr+"/"+navId+"/"+subNavId+"";
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            timeout:10000,
+            async:false,
+            url:url,
+            success:function(res){
+                //页码
+                totalNews = res.data;
+            }
+        });
+        return totalNews;
+    }
+    //取轮播图
+    function getLbImages (navId,subNavId) {
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            timeout:10000,
+            async:false,
+            url:httpUrl+"/news/imageList/"+navId+"/"+subNavId+"",
+            success:function(res){
+                var length = res.data.length;
+                //var i = 1;
+                if(navId == 1){
+                    if(length<=3){
+                        $.each(res.data,function (i,v) {
+                            $('.banner ul').append(
+                                "<li><a href='#'  data-id='"+v.id+"'><img src='"+v.imageSrc+"' alt='"+v.title+"' title='"+v.title+"'/></a></li>"
+                            )
+                        })
+                    }else{
+                        for(var i=1;i<=length;i++){
+                            if(i<=3){
+                                $('.banner ul').append(
+                                    "<li><a href='#'  data-id='"+res.data[i-1].id+"'><img src='"+res.data[i-1].imageSrc+"' alt='"+res.data[i-1].title+"' title='"+res.data[i-1].title+"'/></a></li>"
+                                )
+                            }else{
+                                if($("#picList_first>a").length == 0){
+                                    $('#picList_first').append("<a href='#'  data-id='"+res.data[i-1].id+"'><img src='"+res.data[i-1].imageSrc+"' alt='"+res.data[i-1].title+"' title='"+res.data[i-1].title+"'/></a>");
+                                }else{
+                                    $('.picList').append("<div><a href='#' data-id='"+res.data[i-1].id+"'><img src='"+res.data[i-1].imageSrc+"' alt='"+res.data[i-1].title+"' title='"+res.data[i-1].title+"'/></a></div>");
+                                }
+                            }
+                        }
+                    }
+                }else if(navId == 2 || navId == 5 || navId == 6 || navId == 7){
+                    $.each(res.data,function (i,v) {
+                        $('.banner ul').append(
+                            "<li><a href='#'  data-id='"+v.id+"'><img src='"+v.imageSrc+"' alt='"+v.title+"' title='"+v.title+"'/></a></li>"
+                        )
+                    })
+                }
+
+            }
+        });
+    }
+    $('#inputSearch').click(function () {
+        queryStr = $('.s_input').val();
+        queryNews(queryStr,navId,subNavId,currentPage,pageSize);
+    });
+
+    $(".s_input").keydown(function() {
+       // console.log(e.keyCode);
+        if (event.keyCode == "13") {
+            queryStr = $('.s_input').val();
+            queryNews(queryStr,navId,subNavId,currentPage,pageSize);
+        }
+    })
+
+
+    var pageNum = Math.ceil(queryNewsCount(queryStr,navId,subNavId)/pageSize);
+    $('#loadmore input').click(function () {
+        currentPage++;
+        if(currentPage<=pageNum){
+            var url;
+            if(queryStr == ""){
+                url=httpUrl+"/news/list/"+navId+"/"+subNavId+"/"+currentPage+"/"+pageSize+"";
+            }else{
+                url=httpUrl+"/news/query/"+queryStr+"/"+navId+"/"+subNavId+"/"+currentPage+"/"+pageSize+"";
+            }
+            if(navId==1){
+                $.ajax({
+                    type:"GET",
+                    timeout:10000,
+                    dataType:"json",
+                    async:false,
+                    url:url,
+                    success:function (res) {
+                        $.each(res.data,function (i,v) {
+                            var timestamp = new Date(v.publishTime.time);
+                            var upNum = v.npNum==null?0:v.npNum;
+                            var visit = v.visitNum == null?0:v.visitNum;
+                            //首页没有新闻配图
+                            if(v.iconSrc==""){
+                                $('.news').append(
+                                    "<dl class='newsList'>" +
+                                    "<dt><a class='title' href='#' data-id='"+v.id+"'>"+v.title+"</a></dt>" +
+                                    "<dd class='title_date' style='margin:20px 0 0 20px;float:left;'><span class='newsdate'>"+timestamp.toLocaleString()+"</span></dd>" +
+                                    "<dd class='title_comment' style='margin:20px 0 0 20px;float:right;'><span class='newsthumup'>点赞&nbsp;"+upNum+"&nbsp;&nbsp;浏览&nbsp;"+visit+"</span></dd>" +
+                                    "</dl>"
+                                )
+                            }else{
+                                $('.news').append(
+                                    "<dl class='newsLists'>" +
+                                    "<dt>" +
+                                    "<a href='#' data-id='"+v.id+"'><img src='"+v.iconSrc+"' style='width:400px;height:210px;border-radius:8px' alt='"+v.title+"' title='"+v.title+"'></a>" +
+                                    "</dt>"+
+                                    "<dd>" +
+                                    "<p class='newstitle'><a href='#' data-id='"+v.id+"'>"+v.title+"</a></p>" +
+                                    "<div class='newscontent'>"+v.summary+"</div>" +
+                                    "<div class='newscomment'>" +
+                                    "<span class='newsdate'>"+timestamp.toLocaleString()+"</span>" +
+                                    "<span class='newsthumup'>点赞&nbsp;"+upNum+"&nbsp;&nbsp;浏览&nbsp;"+visit+"</span>" +
+                                    "</div>" +
+                                    "</dd>" +
+                                    "</dl>"
+                                )
+                            }
+                        })
+                    }
+                });
+            }else{
+                //显示其他
+                $.ajax({
+                    type:"GET",
+                    timeout:10000,
+                    dataType:"json",
+                    async:false,
+                    url:url,
+                    success:function (res) {
+                        $.each(res.data,function (i,v) {
+                            var timestamp = new Date(v.publishTime.time);
+                            $ulLists.append(
+                                "<li>" +
+                                "<span>"+timestamp.toLocaleString()+"</span>" +
+                                "<a href='#' data-id='"+v.id+"'>"+v.title+"</a>" +
+                                "</li>"
+                            )
+                        })
+                    }
+                });
+            }
+            reachDataid();
+        }else{
+            $('#loadmore input').val('已全部显示');
+        }
+    });
+
+
+    function reachDataid() {
+        var $titles = $('[data-id]');
+        //var $titles = $ulLists.find('a');
+            $.each($titles,function (i,v) {
+                $(this).click(function () {
+                    var newid =$(this).attr('data-id');
+                    window.open("detail.html?"+newid);
+                })
+            })
+
+    }
+
+
+});

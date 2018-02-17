@@ -1,0 +1,157 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../css/main.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<div class="logo">
+			<a href="#">
+				<img src="../images/LOGO.png"/>
+			</a>
+		</div>
+		<p class="logo_p">云南省新能源汽车信息平台</p>
+
+		<div class="option">
+			<ul>
+				<li id="option_li_search">
+					<div class="search">
+						<form>
+							<input type="button" class="s_sub" value="" id="inputSearch"/>
+							<input type="text" class="s_input" value=""  placeholder="请输入关键词"/>
+						</form>
+					</div>
+				</li>
+				<li><a href="#" class="option_a">登陆</a></li>
+				<li><a href="#" class="option_a">注册</a></li>
+				<li><a href="#" class="option_a">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="c">
+		<div class="nav">
+			<ul>
+				<li data-index="1" class="active"><a href="index.html">首页</a></li>
+				<li data-index="2"><a href="indAllNews.html">行业动态</a>
+					<div class="navrj" style="display:none">
+						<div><a href="industryNews.html" style="color:#ffffff;font-family:MicrosoftYaHei;font-size:18px;" data-subindex="1">行业新闻</a></div>
+						<div><a href="policyNews.html" style="color:#ffffff;font-family:MicrosoftYaHei;font-size:18px;" data-subindex="2">政策</a></div>
+						<div><a href="allowanceNews.html" style="color:#ffffff;font-family:MicrosoftYaHei;font-size:18px;" data-subindex="3">补贴标准</a></div>
+						<div><a href="technormNews.html" style="color:#ffffff;font-family:MicrosoftYaHei;font-size:18px;" data-subindex="4">技术标准</a></div>
+						<div><a href="techNews.html" style="color:#ffffff;font-family:MicrosoftYaHei;font-size:18px;" data-subindex="5">技术动态</a></div>
+					</div>
+				</li>
+				<li data-index="3"><a href="#">充电桩地图</a>
+				</li>
+				<li data-index="4"><a href="#">购车指南</a>
+
+				</li>
+				<li data-index="5"><a href="#">用车指南</a></li>
+				<li data-index="6"><a href="kptechnology.html">科普知识</a></li>
+				<li data-index="7"><a href="skilldata.html">技术资料</a></li>
+			</ul>
+		</div>
+	<div class="banner">
+
+		<ul>
+			<li><a href="#" target="_blank"><img src="../images/car2.jpg"/></a></li>
+			<li><a href="#" target="_blank"><img src="../images/car2.jpg"/></a></li>
+			<li><a href="#" target="_blank"><img src="../images/car2.jpg"/></a></li>
+		</ul>
+
+	</div>
+	</div>
+
+<div class="k">
+		<div class="picList">
+			<div id="picList_first"><img src="../images/car3.jpg"></div>
+			<div><img src="../images/car2.jpg"></div>
+			<div><img src="../images/car3.jpg"></div>
+		</div>
+		<div class="news">
+			<dl class="newsList">
+				<dt><a class="title" href="#">无与伦比的安全感，五大平行进口防弹车盘点报价</a></dt>
+				<dd class="title_date" style="margin:20px 0 0 20px;float:left;"><span class="newsdate">2017-12-04</span></dd>
+				<dd class="title_comment" style="margin:20px 0 0 20px;float:right;"><span class="newsthumup">点赞&nbsp;2600&nbsp;&nbsp;评论&nbsp;0</span></dd>
+			</dl>
+			<dl class="newsLists">
+				<dt>
+				<a><img src="../images/t1.jpg" style="width:400px;height:210px;border-radius:8px"></a>
+				</dt>
+				<dd>
+				<p class="newstitle"><a href="#">充电溯源 行业发展终以用户取胜</a></p>
+				<div class="newscontent">这次是E46机械部分彻底恢复之后的第一次长途出行，三天时间一共折返旅程2700多公里，海拔最高到达4072米，低温最低到零下13度。对于一辆13年车龄一直奔跑在东南沿海的老车来说算是一次高强度的拉练，本着摔打队伍磨炼意志的原则，我选择了从兰州前往格尔木。我13年的时候在当兵，当时就在格尔木外训了四个月，昆仑山的壮美和格尔木河的秀丽都给我留下了很深的印象，三天时间不长不短，主要是磨合一下车。全程E46低速充沛，高速有力，返程中多绕行了三百多公里，去了韩大保健和陈震都去过的水上雅丹，借着冬天结冰和无人游览，近距离看了雅丹。也借着青海的高速将近50公里的大直道且没有车也没有测速，深深的违法超速的开了几天（我承认错误，希望X友轻拍砖，我真的知道错了）。
+					嗯……总的来说，这条路没什么难度，唯一就是道路笔直真的要防止疲劳驾驶，格尔木也是移民城市，近几年旅游业发展也快速，所以吃喝住用行都不用担心，有些景点也没有大规模的进行商业开发，省下来的门票刚好可以弥补一部分油钱，夏秋景人多，冬春客少山荒，如果你不是西北人，推荐你夏秋来行；如果你是西北人，建议你四季来走。</div>
+				<div class="newscomment">
+					<span class="newsdate">2017-12-04</span>
+					<span class="newsthumup">点赞&nbsp;2600&nbsp;&nbsp;评论&nbsp;0</span>
+				</div>
+				</dd>
+			</dl>
+			<dl class="newsLists">
+				<dt>
+					<a><img src="../images/t1.jpg" style="width:400px;height:210px;border-radius:8px"></a>
+				</dt>
+				<dd>
+					<p class="newstitle"><a href="#">充电溯源 行业发展终以用户取胜</a></p>
+					<div class="newscontent">这次是E46机械部分彻底恢复之后的第一次长途出行，三天时间一共折返旅程2700多公里，海拔最高到达4072米，低温最低到零下13度。对于一辆13年车龄一直奔跑在东南沿海的老车来说算是一次高强度的拉练，本着摔打队伍磨炼意志的原则，我选择了从兰州前往格尔木。我13年的时候在当兵，当时就在格尔木外训了四个月，昆仑山的壮美和格尔木河的秀丽都给我留下了很深的印象，三天时间不长不短，主要是磨合一下车。全程E46低速充沛，高速有力，返程中多绕行了三百多公里，去了韩大保健和陈震都去过的水上雅丹，借着冬天结冰和无人游览，近距离看了雅丹。也借着青海的高速将近50公里的大直道且没有车也没有测速，深深的违法超速的开了几天（我承认错误，希望X友轻拍砖，我真的知道错了）。
+						嗯……总的来说，这条路没什么难度，唯一就是道路笔直真的要防止疲劳驾驶，格尔木也是移民城市，近几年旅游业发展也快速，所以吃喝住用行都不用担心，有些景点也没有大规模的进行商业开发，省下来的门票刚好可以弥补一部分油钱，夏秋景人多，冬春客少山荒，如果你不是西北人，推荐你夏秋来行；如果你是西北人，建议你四季来走。</div>
+					<div class="newscomment">
+						<span class="newsdate">2017-12-04</span>
+						<span class="newsthumup">点赞&nbsp;2600&nbsp;&nbsp;评论&nbsp;0</span>
+					</div>
+				</dd>
+			</dl>
+			<dl class="newsLists">
+				<dt>
+					<a><img src="../images/t1.jpg" style="width:400px;height:210px;border-radius:8px"></a>
+				</dt>
+				<dd>
+					<p class="newstitle"><a href="#">充电溯源 行业发展终以用户取胜</a></p>
+					<div class="newscontent">这次是E46机械部分彻底恢复之后的第一次长途出行，三天时间一共折返旅程2700多公里，海拔最高到达4072米，低温最低到零下13度。对于一辆13年车龄一直奔跑在东南沿海的老车来说算是一次高强度的拉练，本着摔打队伍磨炼意志的原则，我选择了从兰州前往格尔木。我13年的时候在当兵，当时就在格尔木外训了四个月，昆仑山的壮美和格尔木河的秀丽都给我留下了很深的印象，三天时间不长不短，主要是磨合一下车。全程E46低速充沛，高速有力，返程中多绕行了三百多公里，去了韩大保健和陈震都去过的水上雅丹，借着冬天结冰和无人游览，近距离看了雅丹。也借着青海的高速将近50公里的大直道且没有车也没有测速，深深的违法超速的开了几天（我承认错误，希望X友轻拍砖，我真的知道错了）。
+						嗯……总的来说，这条路没什么难度，唯一就是道路笔直真的要防止疲劳驾驶，格尔木也是移民城市，近几年旅游业发展也快速，所以吃喝住用行都不用担心，有些景点也没有大规模的进行商业开发，省下来的门票刚好可以弥补一部分油钱，夏秋景人多，冬春客少山荒，如果你不是西北人，推荐你夏秋来行；如果你是西北人，建议你四季来走。</div>
+					<div class="newscomment">
+						<span class="newsdate">2017-12-04</span>
+						<span class="newsthumup">点赞&nbsp;2600&nbsp;&nbsp;评论&nbsp;0</span>
+					</div>
+				</dd>
+			</dl>
+			<dl class="newsLists">
+				<dt>
+					<a><img src="../images/t1.jpg" style="width:400px;height:210px;border-radius:8px"></a>
+				</dt>
+				<dd>
+					<p class="newstitle"><a href="#">充电溯源 行业发展终以用户取胜</a></p>
+					<div class="newscontent">这次是E46机械部分彻底恢复之后的第一次长途出行，三天时间一共折返旅程2700多公里，海拔最高到达4072米，低温最低到零下13度。对于一辆13年车龄一直奔跑在东南沿海的老车来说算是一次高强度的拉练，本着摔打队伍磨炼意志的原则，我选择了从兰州前往格尔木。我13年的时候在当兵，当时就在格尔木外训了四个月，昆仑山的壮美和格尔木河的秀丽都给我留下了很深的印象，三天时间不长不短，主要是磨合一下车。全程E46低速充沛，高速有力，返程中多绕行了三百多公里，去了韩大保健和陈震都去过的水上雅丹，借着冬天结冰和无人游览，近距离看了雅丹。也借着青海的高速将近50公里的大直道且没有车也没有测速，深深的违法超速的开了几天（我承认错误，希望X友轻拍砖，我真的知道错了）。
+						嗯……总的来说，这条路没什么难度，唯一就是道路笔直真的要防止疲劳驾驶，格尔木也是移民城市，近几年旅游业发展也快速，所以吃喝住用行都不用担心，有些景点也没有大规模的进行商业开发，省下来的门票刚好可以弥补一部分油钱，夏秋景人多，冬春客少山荒，如果你不是西北人，推荐你夏秋来行；如果你是西北人，建议你四季来走。</div>
+					<div class="newscomment">
+						<span class="newsdate">2017-12-04</span>
+						<span class="newsthumup">点赞&nbsp;2600&nbsp;&nbsp;评论&nbsp;0</span>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>	
+</div>
+<div class="foot">
+
+	<div class="footinfo">
+		<div><a href="#">关于我们</a></div>
+		<div><a href="#">联系我们</a></div>
+		<div><a href="#">加入我们</a></div>
+		<div><a href="#">法律声明</a></div>
+		<div><a href="#">网站导航</a></div>
+		<div><a href="#">意见反馈</a></div>
+	</div>
+	<div class="copyright"><span>云南省新能源汽车信息平台</span></div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/newslist.js"></script>
+<script type="text/javascript" src="../system/js/jquery.cookie.js"></script>
+</html>

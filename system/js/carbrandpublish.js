@@ -1,0 +1,130 @@
+$(function () {
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    var isShow;
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var cid = GetRequest().id;
+    var oldPage = GetRequest().currentPage;
+
+    if(cid!=null || typeof (cid)!="undefined"){
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            url:httpUrl+"/adminBrand/get/"+cid+"",
+            success:function (res) {
+                $("input[name='brandName']").val(res.data.brandName);
+                $("input[name='brandIdx']").val(res.data.idx);
+                $('#brandImage').next('img').attr('src',res.data.iconSrc);
+            }
+        })
+
+    }
+    //点击添加
+    function addOrUpdate(id) {
+        var url;
+        var option;
+        if(typeof (id)!="undefined"){
+            url=httpUrl+"/adminBrand/update/";
+            option={
+                id:id,
+                BrandName:$("input[name='brandName']").val(),
+                idx:$("input[name='brandIdx']").val(),
+                iconSrc:$('#brandImage').next('img').attr('src')
+            }
+        }else{
+            url=httpUrl+"/adminBrand/add/";
+            option={
+                BrandName:$("input[name='brandName']").val(),
+                 idx:$("input[name='brandIdx']").val(),
+                iconSrc:$('#brandImage').next('img').attr('src')
+            }
+        }
+        if(checkValue(option)){
+            $.ajax({
+                type:"POST",
+                dataType:"json",
+                data:option,
+                url:url,
+                success:function (res) {
+                    alert(res.mess)
+                },
+                error:function (res) {
+                    alert(res.mess)
+                }
+            })
+        }else{
+            alert("操作失败");
+        }
+
+    }
+
+
+    function checkValue(option) {
+        var flag = true;
+        if(option.BrandName == "" || option.BrandName ==null){
+            flag = false;
+        }
+        if(option.idx == "" || option.idx ==null){
+            flag = false;
+        }
+        if(option.iconSrc == "" || option.iconSrc ==null){
+            flag = false;
+        }
+        return flag;
+    }
+
+    //点击添加
+    $('#add').click(function () {
+        addOrUpdate(cid);
+    })
+    //点击返回
+    $('.pub-btn a').click(function () {
+        window.location.href="carbrandslists.html?currentPage="+oldPage+"&isBack=true";
+    })
+
+    //上传
+    var $upInput = $("input[type='file']");
+    $.each($upInput,function (i,v) {
+        var id=$(this).attr('id');
+        document.getElementById(id).onchange = function(){
+            var img = event.target.files[0];
+            // 判断是否图片
+            if(!img){
+                return ;
+            }
+            // 判断图片格式
+            if(!(img.type.indexOf('image')==0 && img.type && /\.(?:jpg|png|gif)$/.test(img.name)) ){
+                alert('图片只能是jpg,gif,png');
+                return ;
+            }
+
+            var reader = new FileReader();
+            reader.readAsDataURL(img);
+
+            reader.onload = function(e){
+                // ajax 上传图片
+                $.ajax({
+                    type:"POST",
+                    url:"http://www.wxlovezy.top:8080/spring/file/fileUpload/",
+                    dataType:"json",
+                    success:function(data){
+                        $('#'+id).next('img').attr('src',"../images/"+img.name+"");
+                    },
+                    error:function(data){
+                        console.log("e")
+                    }
+                })
+            }
+        }
+    })
+})

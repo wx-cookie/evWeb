@@ -1,0 +1,63 @@
+$(function () {
+    var cid = $.cookie('c_id');
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    var isShow;
+    if(cid!=null || cid!='undefined'){
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            url:httpUrl+"/adminComment/cont/"+cid+"",
+            success:function (res) {
+                $("input[name='newsTitle']").val(res.data.newsTitle);
+                $("input[name='userName']").val(res.data.userName);
+                $("textarea[name='comment']").text(res.data.content);
+                $("textarea[name='replay']").text(res.data.replay);
+                isShow = res.data.isShow;
+            }
+        })
+
+    }
+    //点击回复
+    $('#replay').click(function () {
+        var options={
+            id:cid,
+            replay : $("textarea[name='replay']").val()
+        }
+        $.ajax({
+            type:"POST",
+            dataType:"json",
+            url:httpUrl+"/adminComment/replay/",
+            data:options,
+            success:function (res) {
+                alert(res.mess);
+            },
+            error:function (res) {
+                alert(res.mess);
+            }
+        })
+    })
+    //显示评论
+    $('#showComment').click(function () {
+        if(isShow == 1){
+            alert("该评论已经显示");
+            return;
+        }
+        $.ajax({
+            type:"GET",
+            dataType:"json",
+            url:httpUrl+"/adminComment/show/"+cid+"",
+            success:function (res) {
+                alert(res.mess);
+            },
+            error:function (res) {
+                alert(res.mess);
+            }
+        })
+    })
+    //点击返回
+    $('.backlistBtn').click(function () {
+        $.cookie('isBack',"true");
+        $.cookie('oldpage',$.cookie('currentPage'));
+        window.history.go(-1);
+    })
+})

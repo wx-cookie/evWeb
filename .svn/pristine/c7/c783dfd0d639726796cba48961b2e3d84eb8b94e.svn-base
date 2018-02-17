@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="foot">
+
+    <div class="footinfo">
+        <div><a href="#">关于我们</a></div>
+        <div><a href="#">联系我们</a></div>
+        <div><a href="#">加入我们</a></div>
+        <div><a href="#">法律声明</a></div>
+        <div><a href="#">网站导航</a></div>
+        <div><a href="#">意见反馈</a></div>
+    </div>
+    <div class="copyright"><span>云南省新能源汽车信息平台</span></div>
+</div>
+</body>
+</html>

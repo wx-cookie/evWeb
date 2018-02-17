@@ -1,0 +1,49 @@
+$(function(){
+    var httpUrl="http://www.wxlovezy.top:8080/spring";
+    (function(){
+        $.ajax({
+            async:false,
+            type:"GET",
+            url:httpUrl+"/nav/nav/",
+            success:function(data){
+                $.each(data.data,function(i,v){
+                    if(v.id!=1){
+                        $('.navOne').append("<option value='"+v.id+"'>"+v.name+"</option>");
+                    }
+                });
+                var id= $('.navOne option:first').val();
+                querySubNav(id);
+            }
+        });
+    })();
+
+    $('.navOne').change(function(){
+       // console.log($(this).children('option:selected').val());
+        var navId = $(this).children('option:selected').val();
+        querySubNav(navId);
+    });
+
+    function querySubNav(id){
+        if(id==null || id==""){
+
+        }else{
+            $.ajax({
+                type:"GET",
+                async:false,
+                url:httpUrl+"/nav/subNav/"+id+"",
+                success:function(res){
+                    //清除
+                    $('.navTwo').children().remove();
+                    if(res.data.length==0){
+                        $('.navTwo').append("<option value='0'>无</option>");
+                    }else{
+                        $.each(res.data,function(i,v){
+                            $('.navTwo').append("<option value='"+v.id+"'>"+v.name+"</option>");
+                        })
+                    }
+                }
+            })
+        }
+    }
+
+});

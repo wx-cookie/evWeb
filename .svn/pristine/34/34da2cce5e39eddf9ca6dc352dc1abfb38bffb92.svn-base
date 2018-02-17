@@ -1,0 +1,79 @@
+$(function () {
+    var httpUrl = "http://www.wxlovezy.top:8080/spring"
+    var dataId = $.cookie('data-id');
+    var currentPage = 1;
+    var pageSize = 2;
+    var $commentlist = $('#commentLists');
+    Date.prototype.toLocaleString = function() {
+        return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+    };
+    queryCommentsList(currentPage,pageSize);
+
+    function queryCommentsList(currentPage,pageSize) {
+        if($commentlist.children().length!=0){
+            $commentlist.children().remove();
+        }
+        $.ajax({
+            type:"GET",
+            url:httpUrl+"/adminComment/list/"+currentPage+"/"+pageSize+"",
+            dataType:"json",
+            success:function (res) {
+                $.each(res.data,function(i,v){
+                    var time;
+                    if(v.addTime==null){time=""}else{var timestamp = new Date(v.addTime.time);time=timestamp.toLocaleString();}
+                    var isShow = v.isShow==0?"评论不显示":"评论显示";
+                    $commentlist.append(
+                            "<tr data-id="+v.id+"><td class='c_1'>"+v.id+"</td>"+
+                            "<td class='c_2'>"+v.userName+"</td>"+
+                            "<td class='c_3'>"+v.newsTitle+"</td>"+
+                            "<td class='c_4'>"+v.content+"</td>"+
+                            "<td class='c_5'>"+v.replay+"</td>"+
+                            "<td class='c_6'>"+time+"</td>"+
+                            "<td class='c_7'>"+isShow+"</td>"+
+                            "<td class='c_8'><div class='btn'><a class='delete'>删除</a><a href='#' class='manage'>管理</a></div></td>"+
+                            "</tr>"
+                        );
+                })
+            }
+        })
+        var $trs = $commentlist.children();
+        if($trs.length!=0){
+            $.each($trs,function(i,v){
+                var dataid = $(this).attr('data-id');
+                var $options = $(this).find('a');
+                $.each($options,function(){
+                    $(this).click(function(){
+                        if($(this).attr('class')=="delete"){
+                            if(confirm("确定删除？")){
+                                deleteComment(dataid);
+                            }
+                        }else if($(this).attr('class')=="manage"){
+
+                            //把当前页面带过去
+                        }
+                    })
+                })
+            })
+        }
+    }
+
+    function deleteComment(id) {
+        var page = $('.currentPage').html();
+        if(id=="" || id==null){
+            return;
+        }else{
+            $.ajax({
+                type:"GET",
+                url:httpUrl+"/adminComment/delete/"+id+"",
+                dataType:"json",
+                success:function(data){
+                    alert(data.mess);
+                    //刷新页面
+                    //queryNews(queryStr,$.cookie('navId'),$.cookie('subNavId'));
+                    queryCommentsList(page,pageSize);
+                }
+            });
+        }
+    }
+
+});
