@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="css/page.css">
+<!--[if lte IE 8]>
+<link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body style="background: rgb(246, 245, 250);">
+<!--content S-->
+<div class="super-content">
+
+    <div class="superCtab">
+        <div class="publishArt">
+            <h4>车辆管理</h4>
+            <div class="pubMain">
+                <form action="" method="post">
+                    <h5 class="pubtitle">选择分类</h5>
+                    <div class="pubselect">
+							<span class="select_ui"><span class="select_text_ui" style="min-width: 6em;">请选择分类</span><b class="select_arrow"></b>
+								<select  class="brandSelect">
+
+							</select></span>
+                        <span class="select_ui"><span class="select_text_ui" style="min-width: 6em;">请选择分类</span><b class="select_arrow"></b>
+								<select  class="carSelect">
+
+							</select></span>
+                    </div>
+                    <h5 class="pubtitle">车辆名称</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="seriesName">
+                    </div>
+                    <h5 class="pubtitle">建议售价</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="price">
+                    </div>
+                    <h5 class="pubtitle">年份</h5>
+                    <span class="select_ui"><span class="select_text_ui" style="min-width: 6em;">请选择分类</span><b class="select_arrow"></b>
+						<select  class="yearType">
+
+						</select>
+                    </span>
+                    <h5 class="pubtitle">显示顺序</h5>
+                    <div class="pub-txt-bar">
+                        <input type="text" class="shuruTxt" name="idx">
+                    </div>
+                    <h5 class="pubtitle">基本参数</h5>
+                    <div class="pub-txt-bar">
+                        <table class="basicConf">
+                            <tr><th>厂商指导价(元)</th><th>厂商</th><th>级别</th><th>上市时间</th><th>发动机</th><th>变速箱</th><th>长*宽*高</th><th>车身结构</th><th>最高车速</th><th>官方0-100km/h加速(s)</th><th>实测0-100km/h加速(s)</th><th>实测100-0km/h制动(s)</th><th>实测油耗(L/100km)</th><th>工信部综合油耗(L/100km)</th><th>实测离地间隙(mm)</th><th>整车质保</th></tr>
+                            <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">车身</h5>
+                    <div class="pub-txt-bar">
+                        <table class="carBodyConf">
+                            <tr><th>长度(mm)</th><th>宽度(mm)</th><th>高度(mm)</th><th>轴距(mm)</th><th>前轮距(mm)</th><th>后轮距(mm)</th><th>最小离地间距(mm)</th><th>整备质量(kg)</th><th>车身结构</th><th>车门数(个)</th><th>座位数(个)</th><th>油箱容积(L)</th><th>行李箱容积(L)</th></tr>
+                            <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">发动机</h5>
+                    <div class="pub-txt-bar">
+                        <table class="motorConf">
+                            <tr><th>发动机型号</th><th>排量(mL)</th><th>排量(L)</th><th>进气形式</th><th>气缸排列形式</th><th>气缸数(个)</th><th>每缸气门数(个)</th><th>压缩比</th><th>配气机构</th><th>缸径(mm)</th><th>行程(mm)</th><th>最大马力(Ps)</th><th>最大功率(kW)</th><th>最大功率转速(rpm)</th><th>最大扭矩(N·m)</th><th>最大扭矩转速(rpm)</th><th>发动机特有技术</th><th>燃料形式</th><th>燃油标号</th><th>供油方式</th><th>缸盖材料</th><th>缸体材料</th><th>环保标准</th></tr>
+                            <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">变速箱</h5>
+                    <div class="pub-txt-bar">
+                        <table class="gearBox">
+                            <tr><th>简称</th><th>挡位个数</th><th>变速箱类型</th></tr>
+                            <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">底盘转向</h5>
+                    <div class="pub-txt-bar">
+                        <table class="chassisConf">
+                            <tr><th>驱动方式</th><th>四驱形式</th><th>中央差速器结构</th><th>前悬架类型</th><th>后悬架类型</th><th>助力类型</th><th>车体结构</th></tr>
+                            <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">车轮制动</h5>
+                    <div class="pub-txt-bar">
+                        <table class="brakingConf">
+                            <tr><th>前制动器类型</th><th>后制动器类型</th><th>驻车制动类型</th><th>前轮胎规格</th><th>后轮胎规格</th><th>备胎规格</th></tr>
+                            <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">主/被动安全装备</h5>
+                    <div class="pub-txt-bar">
+                        <table class="safetyConf">
+                            <tr><th>主/副驾驶座安全气囊</th><th>前/后排侧气囊</th><th>前/后排头部气囊(气帘)</th><th>膝部气囊</th><th>胎压监测装置</th><th>零胎压继续行驶</th><th>安全带未系提示</th><th>ISOFIX儿童座椅接口</th><th>ABS防抱死</th><th>制动力分配(EBD/CBC等)</th><th>刹车辅助(EBA/BAS/BA等)</th><th>牵引力控制(ASR/TCS/TRC等)</th><th>车身稳定控制(ESC/ESP/DSC等)</th><th>并线辅助</th><th>车道偏离预警系统</th><th>主动刹车/主动安全系统</th><th>夜视系统</th><th>疲劳驾驶提示</th></tr>
+                            <tr><td>
+                                <div>(主:)有:<input type="radio" value="1" name="safetyConf1">无:<input type="radio" value="0" name="safetyConf1"></div>
+                                <div>(副:)有:<input type="radio" value="1" name="safetyConf2">无:<input type="radio" value="0" name="safetyConf2"></div>
+                            </td>
+                                <td>
+                                    <div>(主:)有:<input type="radio" value="1" name="safetyConf3">无:<input type="radio" value="0" name="safetyConf3"></div>
+                                    <div>(副:)有:<input type="radio" value="1" name="safetyConf4">无:<input type="radio" value="0" name="safetyConf4"></div>
+                                </td>
+                                <td>
+                                    <div>(主:)有:<input type="radio" value="1" name="safetyConf5">无:<input type="radio" value="0" name="safetyConf5"></div>
+                                    <div>(副:)有:<input type="radio" value="1" name="safetyConf6">无:<input type="radio" value="0" name="safetyConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf7">无:<input type="radio" value="0" name="safetyConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf8">无:<input type="radio" value="0" name="safetyConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf9">无:<input type="radio" value="0" name="safetyConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf10">无:<input type="radio" value="0" name="safetyConf10"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf11">无:<input type="radio" value="0" name="safetyConf11"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf12">无:<input type="radio" value="0" name="safetyConf12"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf13">无:<input type="radio" value="0" name="safetyConf13"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf14">无:<input type="radio" value="0" name="safetyConf14"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf15">无:<input type="radio" value="0" name="safetyConf15"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf16">无:<input type="radio" value="0" name="safetyConf16"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf17">无:<input type="radio" value="0" name="safetyConf17"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf18">无:<input type="radio" value="0" name="safetyConf18"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf19">无:<input type="radio" value="0" name="safetyConf19"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf20">无:<input type="radio" value="0" name="safetyConf20"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="safetyConf21">无:<input type="radio" value="0" name="safetyConf21"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">辅助/操控配置</h5>
+                    <div class="pub-txt-bar">
+                        <table class="assistConf">
+                            <tr><th>前/后驻车雷达</th><th>倒车视频影像</th><th>全景摄像头</th><th>定速巡航</th><th>自适应巡航</th><th>自动泊车入位</th><th>发动机启停技术</th><th>自动驾驶技术</th><th>上坡辅助</th><th>自动驻车</th><th>陡坡缓降</th><th>可变悬架</th><th>空气悬架</th><th>电磁感应悬架</th><th>可变转向比</th><th>前桥限滑差速器/差速锁</th><th>中央差速器锁止功能</th><th>后桥限滑差速器/差速锁</th><th>整体主动转向系统</th></tr>
+                            <tr><td>
+                                <div>(前:)有:<input type="radio" value="1" name="assistConf1">无:<input type="radio" value="0" name="assistConf1"></div>
+                                <div>(后:)有:<input type="radio" value="1" name="assistConf2">无:<input type="radio" value="0" name="assistConf2"></div>
+                            </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf3">无:<input type="radio" value="0" name="assistConf3"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf4">无:<input type="radio" value="0" name="assistConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf5">无:<input type="radio" value="0" name="assistConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf6">无:<input type="radio" value="0" name="assistConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf7">无:<input type="radio" value="0" name="assistConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf8">无:<input type="radio" value="0" name="assistConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf9">无:<input type="radio" value="0" name="assistConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf10">无:<input type="radio" value="0" name="assistConf10"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf11">无:<input type="radio" value="0" name="assistConf11"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf12">无:<input type="radio" value="0" name="assistConf12"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf13">无:<input type="radio" value="0" name="assistConf13"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf14">无:<input type="radio" value="0" name="assistConf14"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf15">无:<input type="radio" value="0" name="assistConf15"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf16">无:<input type="radio" value="0" name="assistConf16"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf17">无:<input type="radio" value="0" name="assistConf17"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf18">无:<input type="radio" value="0" name="assistConf18"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf19">无:<input type="radio" value="0" name="assistConf19"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="assistConf20">无:<input type="radio" value="0" name="assistConf20"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">外部/防盗配置</h5>
+                    <div class="pub-txt-bar">
+                        <table class="antiTheftConf">
+                            <tr><th>电动天窗</th><th>全景天窗</th><th>多天窗</th><th>运动外观套件</th><th>铝合金轮圈</th><th>电动吸合门</th><th>侧滑门</th><th>电动后备厢</th><th>感应后备厢</th><th>车顶行李架</th><th>发动机电子防盗</th><th>车内中控锁</th><th>遥控钥匙</th><th>无钥匙启动系统</th><th>无钥匙进入系统</th><th>远程启动发动机</th></tr>
+                            <tr><td>
+                                <div>有:<input type="radio" value="1" name="antiTheftConf1">无:<input type="radio" value="0" name="antiTheftConf1"></div>
+                            </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf2">无:<input type="radio" value="0" name="antiTheftConf2"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf3">无:<input type="radio" value="0" name="antiTheftConf3"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf4">无:<input type="radio" value="0" name="antiTheftConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf5">无:<input type="radio" value="0" name="antiTheftConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf6">无:<input type="radio" value="0" name="antiTheftConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf7">无:<input type="radio" value="0" name="antiTheftConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf8">无:<input type="radio" value="0" name="antiTheftConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf9">无:<input type="radio" value="0" name="antiTheftConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf10">无:<input type="radio" value="0" name="antiTheftConf10"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf11">无:<input type="radio" value="0" name="antiTheftConf11"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf12">无:<input type="radio" value="0" name="antiTheftConf12"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf13">无:<input type="radio" value="0" name="antiTheftConf13"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf14">无:<input type="radio" value="0" name="antiTheftConf14"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf15">无:<input type="radio" value="0" name="antiTheftConf15"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="antiTheftConf16">无:<input type="radio" value="0" name="antiTheftConf16"></div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">内部配置</h5>
+                    <div class="pub-txt-bar">
+                        <table class="internalConf">
+                            <tr><th>皮质方向盘</th><th>方向盘调节</th><th>方向盘电动调节</th><th>多功能方向盘</th><th>方向盘换挡</th><th>方向盘加热</th><th>方向盘记忆</th><th>行车电脑显示屏</th><th>全液晶仪表盘</th><th>HUD抬头数字显示</th><th>内置行车记录仪</th><th>主动降噪</th><th>手机无线充电</th></tr>
+                            <tr><td>
+                                <div>有:<input type="radio" value="1" name="internalConf1">无:<input type="radio" value="0" name="internalConf1"></div>
+                            </td>
+                                <td>
+                                    <div><input type="text" name="fxptj" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf2">无:<input type="radio" value="0" name="internalConf2"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf3">无:<input type="radio" value="0" name="internalConf3"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf4">无:<input type="radio" value="0" name="internalConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf5">无:<input type="radio" value="0" name="internalConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf6">无:<input type="radio" value="0" name="internalConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf7">无:<input type="radio" value="0" name="antiTheftConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf8">无:<input type="radio" value="0" name="internalConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf9">无:<input type="radio" value="0" name="internalConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf10">无:<input type="radio" value="0" name="internalConf10"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf11">无:<input type="radio" value="0" name="internalConf11"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="internalConf12">无:<input type="radio" value="0" name="internalConf12"></div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">座椅配置</h5>
+                    <div class="pub-txt-bar">
+                        <table class="seatConf">
+                            <tr><th>座椅材质</th><th>运动风格座椅</th><th>座椅高低调节</th><th>腰部支撑调节</th><th>肩部支撑调节</th><th>主/副驾驶座电动调节</th><th>第二排靠背角度调节</th><th>第二排座椅移动</th><th>后排座椅电动调节</th><th>副驾驶位后排可调节按钮</th><th>电动座椅记忆</th><th>前/后排座椅加热</th><th>前/后排座椅通风</th><th>前/后排座椅按摩</th><th>第二排独立座椅</th><th>第三排座椅</th><th>后排座椅放倒方式</th><th>前/后中央扶手</th><th>后排杯架</th><th>可加热/制冷杯架</th></tr>
+                            <tr><td>
+                                <div><input type="text" name="zycz" style="width: 120px;height: 30px;outline: none"></div>
+                            </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf1">无:<input type="radio" value="0" name="seatConf1"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf2">无:<input type="radio" value="0" name="seatConf2"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf3">无:<input type="radio" value="0" name="seatConf3"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf4">无:<input type="radio" value="0" name="seatConf4"></div>
+                                </td>
+                                <td>
+                                    <div>(主:)有:<input type="radio" value="1" name="seatConf5">无:<input type="radio" value="0" name="seatConf5"></div>
+                                    <div>(副:)有:<input type="radio" value="1" name="seatConf6">无:<input type="radio" value="0" name="seatConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf7">无:<input type="radio" value="0" name="seatConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf8">无:<input type="radio" value="0" name="seatConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf9">无:<input type="radio" value="0" name="seatConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf10">无:<input type="radio" value="0" name="seatConf10"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf11">无:<input type="radio" value="0" name="seatConf11"></div>
+                                </td>
+                                <td>
+                                    <div>(前:)有:<input type="radio" value="1" name="seatConf12">无:<input type="radio" value="0" name="seatConf12"></div>
+                                    <div>(后:)有:<input type="radio" value="1" name="seatConf13">无:<input type="radio" value="0" name="seatConf13"></div>
+                                </td>
+                                <td>
+                                    <div>(前:)有:<input type="radio" value="1" name="seatConf14">无:<input type="radio" value="0" name="seatConf14"></div>
+                                    <div>(后:)有:<input type="radio" value="1" name="seatConf15">无:<input type="radio" value="0" name="seatConf15"></div>
+                                </td>
+                                <td>
+                                    <div>(前:)有:<input type="radio" value="1" name="seatConf16">无:<input type="radio" value="0" name="seatConf16"></div>
+                                    <div>(后:)有:<input type="radio" value="1" name="seatConf17">无:<input type="radio" value="0" name="seatConf17"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf18">无:<input type="radio" value="0" name="seatConf18"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf19">无:<input type="radio" value="0" name="seatConf19"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="fdfs" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div>(前:)有:<input type="radio" value="1" name="seatConf20">无:<input type="radio" value="0" name="seatConf20"></div>
+                                    <div>(后:)有:<input type="radio" value="1" name="seatConf21">无:<input type="radio" value="0" name="seatConf21"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf22">无:<input type="radio" value="0" name="seatConf22"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="seatConf23">无:<input type="radio" value="0" name="seatConf23"></div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">多媒体配置</h5>
+                    <div class="pub-txt-bar">
+                        <table class="multimediaConf">
+                            <tr><th>GPS导航系统</th><th>定位互动服务</th><th>中控台彩色大屏</th><th>中控台彩色大屏尺寸</th><th>中控液晶屏分屏显示</th><th>蓝牙/车载电话</th><th>手机互联/映射</th><th>车联网</th><th>车载电视</th><th>后排液晶屏</th><th>220V/230V电源</th><th>外接音源接口</th><th>CD/DVD</th><th>扬声器品牌</th><th>扬声器数量</th></tr>
+                            <tr>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf1">无:<input type="radio" value="0" name="multimediaConf1"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf2">无:<input type="radio" value="0" name="multimediaConf2"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf3">无:<input type="radio" value="0" name="multimediaConf3"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="zkdp" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf4">无:<input type="radio" value="0" name="multimediaConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf5">无:<input type="radio" value="0" name="multimediaConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf6">无:<input type="radio" value="0" name="multimediaConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf7">无:<input type="radio" value="0" name="multimediaConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf8">无:<input type="radio" value="0" name="multimediaConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf9">无:<input type="radio" value="0" name="multimediaConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="multimediaConf10">无:<input type="radio" value="0" name="multimediaConf10"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="wjyjk" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="CD" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="ysqbrand" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="ysqnum" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">灯光配置</h5>
+                    <div class="pub-txt-bar">
+                        <table class="lightingConf">
+                            <tr><th>近光灯</th><th>远光灯</th><th>LED日间行车灯</th><th>自适应远近光</th><th>自动头灯</th><th>转向辅助灯</th><th>转向头灯</th><th>前雾灯</th><th>大灯高度可调</th><th>大灯清洗装置</th><th>车内氛围灯</th></tr>
+                            <tr>
+                                <td>
+                                    <div><input type="text" name="jgd" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="ygd" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf1">无:<input type="radio" value="0" name="lightingConf1"></div>
+                                </td>
+
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf2">无:<input type="radio" value="0" name="lightingConf2"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf3">无:<input type="radio" value="0" name="lightingConf3"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf4">无:<input type="radio" value="0" name="lightingConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf5">无:<input type="radio" value="0" name="lightingConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf6">无:<input type="radio" value="0" name="lightingConf6"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf7">无:<input type="radio" value="0" name="lightingConf7"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf8">无:<input type="radio" value="0" name="lightingConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="lightingConf9">无:<input type="radio" value="0" name="lightingConf9"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">玻璃/后视镜</h5>
+                    <div class="pub-txt-bar">
+                        <table class="glassConf">
+                            <tr><th>前/后电动车窗</th><th>车窗一键升降</th><th>车窗防夹手功能</th><th>防紫外线/隔热玻璃</th><th>后视镜电动调节</th><th>后视镜加热</th><th>内/外后视镜自动防眩目</th><th>流媒体车内后视镜</th><th>后视镜电动折叠</th><th>后视镜记忆</th><th>后风挡遮阳帘</th><th>后风挡遮阳帘</th><th>后排侧隐私玻璃</th><th>遮阳板化妆镜</th><th>后雨刷</th><th>感应雨刷</th></tr>
+                            <tr>
+                                <td>
+                                    <div>(前:)有:<input type="radio" value="1" name="glassConf1">无:<input type="radio" value="0" name="glassConf1"></div>
+                                    <div>(后:)有:<input type="radio" value="1" name="glassConf2">无:<input type="radio" value="0" name="glassConf2"></div>
+                                </td>
+                                <td>
+                                    <div><input type="text" name="glassUpOrDown" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf3">无:<input type="radio" value="0" name="glassConf3"></div>
+                                </td>
+
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf4">无:<input type="radio" value="0" name="glassConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf5">无:<input type="radio" value="0" name="lightingConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf6">无:<input type="radio" value="0" name="glassConf6"></div>
+                                </td>
+                                <td>
+                                    <div>(内:)有:<input type="radio" value="1" name="glassConf7">无:<input type="radio" value="0" name="glassConf7"></div>
+                                    <div>(外:)有:<input type="radio" value="1" name="glassConf8">无:<input type="radio" value="0" name="glassConf8"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf9">无:<input type="radio" value="0" name="glassConf9"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf10">无:<input type="radio" value="0" name="glassConf10"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf11">无:<input type="radio" value="0" name="glassConf11"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf12">无:<input type="radio" value="0" name="glassConf12"></div>
+                                </td>
+
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf13">无:<input type="radio" value="0" name="glassConf13"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf14">无:<input type="radio" value="0" name="glassConf14"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf15">无:<input type="radio" value="0" name="glassConf15"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf16">无:<input type="radio" value="0" name="glassConf16"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="glassConf17">无:<input type="radio" value="0" name="glassConf17"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 class="pubtitle">空调/冰箱</h5>
+                    <div class="pub-txt-bar">
+                        <table class="AirConditionerConf">
+                            <tr><th>空调控制方式</th><th>后排独立空调</th><th>后座出风口</th><th>温度分区控制</th><th>车内空气调节/花粉过滤</th><th>车载空气净化器</th><th>车载冰箱</th></tr>
+                            <tr>
+                                <td>
+                                    <div><input type="text" name="ktkzfs" style="width: 120px;height: 30px;outline: none"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="AirConditionerConf1">无:<input type="radio" value="0" name="AirConditionerConf1"></div>
+                                </td>
+
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="AirConditionerConf2">无:<input type="radio" value="0" name="AirConditionerConf2"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="AirConditionerConf3">无:<input type="radio" value="0" name="AirConditionerConf3"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="AirConditionerConf4">无:<input type="radio" value="0" name="AirConditionerConf4"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="AirConditionerConf5">无:<input type="radio" value="0" name="AirConditionerConf5"></div>
+                                </td>
+                                <td>
+                                    <div>有:<input type="radio" value="1" name="AirConditionerConf6">无:<input type="radio" value="0" name="AirConditionerConf6"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="commentoption" style="margin-top: 30px;overflow: hidden">
+                        <div class="pub-btn" style="padding: 0px;float: left">
+                            <input type="button" id="add" value="添加" class="saveBtn">
+                        </div>
+                        <div class="pub-btn" style="padding: 0px;float: left;margin-left: 40px">
+                            <a href="#"><span style="margin-top: 10px;display: block;">返回列表</span></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="text/javascript" src="js/carbrandpublish.js"></script>-->
+</body></html>
