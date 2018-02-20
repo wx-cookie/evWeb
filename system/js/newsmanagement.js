@@ -213,7 +213,7 @@ function options() {
                 $(this).click(function(){
                     if($(this).attr('class')=="modify"){
                         oldPage = $('.currentPage').text();
-                        location.href="wenzhang_xinwen_fabu.html?id="+dataid+"&navId="+navId+"&subNavId="+subNavId+"&currentPage="+oldPage;
+                        location.href="http://www.wxlovezy.top:8080/spring/admin/addNew?id="+dataid+"&navId="+navId+"&subNavId="+subNavId+"&currentPage="+oldPage;
                     }else if($(this).attr('class')=="delete"){
                         if(confirm("确定删除？")){
                             deleteNew(dataid);
@@ -340,7 +340,7 @@ function options() {
 
     $('#publishNew').click(function () {
         oldPage = $('.currentPage').text();
-        location.href="wenzhang_xinwen_fabu.html?navId="+navId+"&subNavId="+subNavId+"&currentPage="+oldPage;
+        location.href="http://www.wxlovezy.top:8080/spring/admin/addNew?navId="+navId+"&subNavId="+subNavId+"&currentPage="+oldPage;
     });
 
 
