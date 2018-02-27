@@ -36,7 +36,7 @@
                     <div class="pub-txt-bar">
                         <input type="text" class="shuruTxt" name="seriesName">
                     </div>
-                    <h5 class="pubtitle">建议售价(万)</h5>
+                    <h5 class="pubtitle">建议售价</h5>
                     <div class="pub-txt-bar">
                         <input type="text" class="shuruTxt" name="price">
                     </div>
@@ -71,7 +71,7 @@
                             <tr><th>长度(mm)</th><th>宽度(mm)</th><th>高度(mm)</th><th>轴距(mm)</th><th>前轮距(mm)</th><th>后轮距(mm)</th><th>最小离地间距(mm)</th></tr>
                             <tr><td><input type="text" name="carBodyConf1"></td><td><input type="text" name="carBodyConf2"></td><td><input type="text" name="carBodyConf3"></td><td><input type="text" name="carBodyConf4"></td><td><input type="text" name="carBodyConf5"></td><td><input type="text" name="carBodyConf6"></td><td><input type="text" name="carBodyConf7"></td></tr>
                             <tr><th>整备质量(kg)</th><th>车身结构</th><th>车门数(个)</th><th>座位数(个)</th><th>油箱容积(L)</th><th>行李箱容积(L)</th></tr>
-                            <tr><td><input type="text" name="carBodyConf8"></td><td><input type="text" name="carBodyConf9"></td><td><input type="text" name="carBodyConf10"></td><td><input type="text" name="carBodyConf11"></td><td><input type="text" name="carBodyConf12"></td><td><input type="text" name="carBodyConf13"></td></tr>
+                            <tr><td><input type="text" name="carBodyConf8"></td><td><input type="text" name="carBodyConf9"></td><td><input type="text" name="carBodyConf9"></td><td><input type="text" name="carBodyConf10"></td><td><input type="text" name="carBodyConf11"></td><td><input type="text" name="carBodyConf12"></td></tr>
                         </table>
                     </div>
                     <h5 class="pubtitle">发动机</h5>

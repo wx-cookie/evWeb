@@ -56,11 +56,11 @@ $(function () {
         var dateTime = new Date();
         var date = dateTime.getFullYear();
         $('.yearType').append(
-            "<option value='"+(date+1)+"'>"+(date+1)+"</option>"
+            "<option value='"+(date-1)+"'>"+(date-1)+"</option>"
         )
         for(var i =0;i<9;i++){
             $('.yearType').append(
-                "<option value='"+(date-i)+"'>"+(date-i)+"</option>"
+                "<option value='"+(date+i)+"'>"+(date+i)+"</option>"
             )
         }
 
@@ -269,7 +269,6 @@ $(function () {
             options.seatConfig[name] = $("input:radio[name='"+name+"']:checked").val();
         }
         options.seatConfig['zycz'] = $("input[name='zycz']").val();
-        options.seatConfig['fdfs'] = $("input[name='fdfs']").val();
         options.seatConfig = JSON.stringify(options.seatConfig);
 
         for(var i =1;i<=10;i++){
@@ -307,85 +306,37 @@ $(function () {
         //
         if(typeof (id)=="undefined"){
             url = httpUrl+"/adminCarSeries/add/"
-            if(checkValue(options)){
-                $.ajax({
-                    type:"POST",
-                    dataType:"json",
-                    url:url,
-                    data:options,
-                    success:function (res) {
-                        alert(res.mess)
-                    },
-                    error:function (res) {
-                        alert(res.mess)
-                    }
-                })
-            }
+            console.log(options);
+            $.ajax({
+                type:"POST",
+                dataType:"json",
+                url:url,
+                data:options,
+                success:function (res) {
+                    alert(res.mess)
+                },
+                error:function (res) {
+                    alert(res.mess)
+                }
+            })
         }else{
             url = httpUrl+"/adminCarSeries/update/"
             options.id=id;
-            if(checkValue(options)){
-                $.ajax({
-                    type:"POST",
-                    dataType:"json",
-                    url:url,
-                    data:options,
-                    success:function (res) {
-                        alert(res.mess)
-                    },
-                    error:function (res) {
-                        alert(res.mess)
-                    }
-                })
-            }
+            $.ajax({
+                type:"POST",
+                dataType:"json",
+                url:url,
+                data:options,
+                success:function (res) {
+                    alert(res.mess)
+                },
+                error:function (res) {
+                    alert(res.mess)
+                }
+            })
         }
 
     }
-
-    function checkValue(option) {
-        var flag = true;
-        var zreg = /^\d{1,9}$|^\d{1,9}[.]\d{1,9}$/;
-        var idxreg = /^[+-]?\d+(\.\d+)?$/;
-        if(zreg.test(option.price)==false){
-            if($("input[name='price']").next().length!=0){
-                $("input[name='price']").next().remove();
-            }
-            $("input[name='price']").after("<span style='color: red;margin-left: 30px'>建议售价只能是数字</span>");
-            flag = false;
-        }else{
-            if($("input[name='price']").next().length!=0){
-                $("input[name='price']").next().remove();
-            }
-            flag = true;
-        }
-        if(idxreg.test(option.idx)==false){
-            if($("input[name='idx']").next().length!=0){
-                $("input[name='idx']").next().remove();
-            }
-            $("input[name='idx']").after("<span style='color: red;margin-left: 30px'>显示顺序只能是数字</span>");
-            flag = false;
-        }else{
-            if($("input[name='idx']").next().length!=0){
-                $("input[name='idx']").next().remove();
-            }
-            flag = true;
-        }
-        if(option.seriesName==""){
-            if($("input[name='seriesName']").next().length!=0){
-                $("input[name='seriesName']").next().remove();
-            }
-            $("input[name='seriesName']").after("<span style='color: red;margin-left: 30px'>车辆名称不能为空</span>");
-            flag = false;
-        }else{
-            if($("input[name='seriesName']").next().length!=0){
-                $("input[name='seriesName']").next().remove();
-            }
-            flag = true;
-        }
-        return flag;
-
-    }
-
     $('#add').click(function () {
        addOrUpdate(id);
     })

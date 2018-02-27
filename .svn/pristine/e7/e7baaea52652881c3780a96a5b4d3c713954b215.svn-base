@@ -1,0 +1,867 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<title></title>
+<body>
+<div class="head">
+    <div class="wrap">
+        <div class="logo">
+            <a href="#">
+                <img src="../images/LOGO.png"/>
+            </a>
+        </div>
+        <p class="logo_p">云南省新能源汽车信息平台</p>
+
+        <div class="option">
+            <ul>
+                <li id="option_li_search">
+                    <div class="search">
+                        <form>
+                            <input type="button" class="s_sub" id="inputSearch"/>
+                            <input type="text" class="s_input" placeholder="请输入关键词"/>
+                        </form>
+                    </div>
+                </li>
+                <li><a href="#" class="option_a">登陆</a></li>
+                <li><a href="#" class="option_a">注册</a></li>
+                <li><a href="#" class="option_a">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="config-box" style="padding-left: 180px;margin-top: 20px">
+    <div class="car-nav">
+        <div class="car-nav-bar">
+            <div class="car-nav-box" style="text-align:left">
+                <a href="javascript:" name='cxindex' style="padding-left:3px;">车系首页</a>
+                <i class="line"></i>
+                <a href="javascript:" name='cspz' style="padding-left:3px;">参数配置</a>
+                <i class="line"></i>
+                <a href="javascript:" name='sptp' style="padding-left:3px;">实拍图片</a>
+                <i class="line"></i>
+                <a href="javascript:" name='pcjs' style="padding-left:3px;">评测介绍</a>
+                <i class="line"></i>
+            </div>
+        </div>
+    </div>
+    <!--<div class="config-filter"></div>-->
+    <div id="config" style="position:relative;">
+        <table class="OdCarConfigTableHeader">
+            <tr>
+                <th class="carxNameBox title">
+                    <div class="carxNameConfig" style="height: auto; top: 0px; left: 180px;">
+                        <div class="highLight"></div>
+                        <div class="hideSame"></div>
+                        <div class="hideEmpty"></div>
+                    </div>
+                </th>
+
+            </tr>
+        </table>
+        <table class="OdCarConfigTable" cellspacing="1">
+            <tr>
+                <th id="0"  data-itemid="0"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;基本参数</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf1">厂商指导价(万)&nbsp;&nbsp;
+                </td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf2">厂商&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf3">级别&nbsp;&nbsp;</td>
+
+            </tr>
+
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf4">上市时间&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf5">发动机&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf6">变速箱&nbsp;&nbsp;</td>
+
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf7">长*宽*高(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf8">车身结构&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf9">车身结构&nbsp;&nbsp;</td>
+
+            </tr>
+
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf10">官方0-100km/h加速(s)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf11">实测0-100km/h加速(s)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf12">实测油耗(L/100km)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf13">工信部综合油耗(L/100km)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf14">实测离地间隙(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="basicConf15">整车质保&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr>
+                <th id="1"  data-itemid="1"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;车身</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf1">长度(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf2">宽度(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf3">高度(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf4">轴距(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf5">前轮距(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf6">后轮距(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf7">最小离地间隙(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf8">整备质量(kg)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf9">车身结构&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf10">车门数(个)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf11">座位数(个)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf12">油箱容积(L)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="carBodyConf13">行李箱容积(L)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr>
+                <th id="2" data-itemid="2"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;发动机</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf1">发动机型号&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf2">排量(ml)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf3">排量(L)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf4">进气形式&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf5">气缸数(个)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf6">每缸气门数(个)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf7">压缩比&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf8">配气机构&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf9">缸径(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf10">行程(mm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf11">最大马力(Ps)&nbsp;&nbsp;</td>
+
+            </tr>
+
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf12">最大功率(kW)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf13">最大功率转速(rpm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf14">最大扭矩(N·m)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf15">最大扭矩转速(rpm)&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf16">发动机特有技术&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf17">燃料形式&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf18">燃油标号&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf19">供油方式&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf20">缸盖材料&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf21">缸体材料&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="motorConf22">环保标准&nbsp;&nbsp;</td>
+            </tr>
+
+            <tr>
+                <th id="3" data-itemid="3"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;变速箱</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="gearbox1">简称&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="gearbox2">挡位个数&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="gearbox3">变速箱类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr>
+                <th id="4" data-itemid="4" colspan="5" class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;底盘转向</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf1">驱动方式&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf2">四驱形式&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf3">中央差速器结构&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf4">前悬架类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf5">后悬架类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf6">助力类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="chassisConf7">车体结构&nbsp;&nbsp;</td>
+
+            </tr>
+
+            <tr>
+                <th id="5" data-itemid="5" class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;车轮制动</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="brakingConf1">前制动器类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="brakingConf2">后制动器类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="brakingConf3">驻车制动类型&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="brakingConf4">前轮胎规格&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="brakingConf5">后轮胎规格&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="brakingConf6">备胎规格&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr>
+                <th id="6" data-itemid="6"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;主/被动安全装备</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf1">主/副驾驶座安全气囊&nbsp;&nbsp;
+                </td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf3">前/后排侧气囊&nbsp;&nbsp;</td>
+
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf5">前/后排头部气囊(气帘)&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf7">膝部气囊&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf8">胎压监测装置&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf9">零胎压继续行驶&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf10">安全带未系提示&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf11">ISOFIX儿童座椅接口&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf12">ABS防抱死&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf13">制动力分配(EBD/CBC等)&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf14">刹车辅助(EBA/BAS/BA等)&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf15">牵引力控制(ASR/TCS/TRC等)&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf16">车身稳定控制(ESC/ESP/DSC等)&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf17">并线辅助&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf18">车道偏离预警系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf19">主动刹车/主动安全系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf20">夜视系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="safetyConf21">疲劳驾驶提示&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="7" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;辅助/操控配置</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf1">前/后驻车雷达&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf3">倒车视频影像&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf4">全景摄像头&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf5">定速巡航&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf6">自适应巡航&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf7">自动泊车入位&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf8">发动机启停技术&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf9">自动驾驶技术&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf10">上坡辅助&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf11">自动驻车&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf12">陡坡缓降&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf13">可变悬架&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf14">空气悬架&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf15">电磁感应悬架&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf16">可变转向比&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf17">前桥限滑差速器/差速锁&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf18">中央差速器锁止功能&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf19">后桥限滑差速器/差速锁&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="assistConf20">整体主动转向系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="8" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;外部/防盗配置</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf1">电动天窗&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf2">全景天窗&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf3">多天窗&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf4">运动外观套件&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf5">铝合金轮圈&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf6">电动吸合门&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf7">侧滑门&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf8">电动后备厢&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf9">感应后备厢&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf10">车顶行李架&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf11">发动机电子防盗&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf12">车内中控锁&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf13">遥控钥匙&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf14">无钥匙启动系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf15">无钥匙进入系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="antiTheftConf16">远程启动&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="9" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;内部配置</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf1">皮质方向盘&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="fxptj">方向盘调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf2">方向盘电动调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf3">多功能方向盘&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf4">方向盘换挡&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf5">方向盘加热&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf6">方向盘记忆&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf7">行车电脑显示屏&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf8">全液晶仪表盘&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf9">HUD抬头数字显示&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf10">内置行车记录仪&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf11">主动降噪&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="internalConf12">手机无线充电&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="10" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;座椅配置</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="zycz">座椅材质&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf1">运动风格座椅&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf2">座椅高低调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf3">腰部支撑调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf4">肩部支撑调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf5">主/副驾驶座电动调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf7">第二排靠背角度调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf8">第二排座椅移动&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf9">后排座椅电动调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf10">副驾驶位后排可调节按钮&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf11">电动座椅记忆&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf12">前/后排座椅加热&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf14">前/后排座椅通风&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf16">前/后排座椅按摩&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf18">第二排独立座椅&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf19">第三排座椅&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="fdfs">后排座椅放倒方式&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf20">前/后中央扶手&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf22">后排杯架&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="seatConf23">可加热/制冷杯架&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="11" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;多媒体配置</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf1">GPS导航系统&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf2">定位互动服务&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf3">中控台彩色大屏&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="zkdp">中控台彩色大屏&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf4">中控液晶屏分屏显示&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf5">蓝牙/车载电话&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf6">手机互联/映射&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf7">车联网&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf8">车载电视&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf9">后排液晶屏&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="multimediaConf10">220V/230V电源&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="wjyjk">外接音源接口&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="CD">CD/DVD电源&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="ysqbrand">扬声器品牌&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="ysqnum">扬声器数量&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="12" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;灯光配置</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="jgd">近光灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="ygd">远光灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf1">LED日间行车灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf2">自适应远近光&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf3">自动头灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf4">转向辅助灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf5">转向头灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf6">前雾灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf7">大灯高度可调&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf8">大灯清洗装置&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="lightingConf9">车内氛围灯&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="13" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;玻璃/后视镜</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf1">前/后电动车窗&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassUpOrDown">车窗一键升降&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf3">车窗防夹手功能&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf4">防紫外线/隔热玻璃&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf5">后视镜电动调节&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf6">后视镜加热&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf7">内/外后视镜自动防眩目&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf9">流媒体车内后视镜&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf10">后视镜电动折叠&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf11">后视镜记忆&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf12">后风挡遮阳帘&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf13">后排侧遮阳帘&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf14">后排侧隐私玻璃&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf15">遮阳板化妆镜&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf16">后雨刷&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="glassConf17">感应雨刷&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <th id="14" data-itemid="7"  class="itemsTitle">&nbsp;&nbsp;&nbsp;&nbsp;空调/冰箱</th>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="ktkzfs">空调控制方式&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="AirConditionerConf1">后排独立空调&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="AirConditionerConf2">后座出风口&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="AirConditionerConf3">温度分区控制&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="AirConditionerConf4">车内空气调节/花粉过滤&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="AirConditionerConf5">车载空气净化器&nbsp;&nbsp;</td>
+            </tr>
+            <tr class="OdCarConfigTableBody">
+                <td class="confs" name="AirConditionerConf6">车载冰箱&nbsp;&nbsp;</td>
+            </tr>
+        </table>
+        <ul class="OdCarConfigNav" style="top: 102px; left: -170px; position: absolute;">
+            <li data-itemid="0" class="navLi artive">
+                <a href="javascript:">基本参数</a>
+                <em></em>
+            </li>
+            <li data-itemid="1" class="navLi">
+                <a href="javascript:">车身</a>
+                <em></em>
+            </li>
+            <li data-itemid="2" class="navLi">
+                <a href="javascript:">发动机</a>
+                <em></em>
+            </li>
+            <li data-itemid="3" class="navLi">
+                <a href="javascript:">变速箱</a>
+                <em></em>
+            </li>
+            <li data-itemid="4" class="navLi">
+                <a href="javascript:">底盘转向</a>
+                <em></em>
+            </li>
+            <li data-itemid="5" class="navLi">
+                <a href="javascript:">车轮制动</a>
+                <em></em>
+            </li>
+            <li data-itemid="6" class="navLi">
+                <a href="javascript:">主/被动安全装备</a>
+                <em></em>
+            </li>
+            <li data-itemid="7" class="navLi">
+                <a href="javascript:">辅助/操作设施</a>
+                <em></em>
+            </li>
+            <li data-itemid="8" class="navLi">
+                <a href="javascript:">外部/防盗设施</a>
+                <em></em>
+            </li>
+            <li data-itemid="9" class="navLi">
+                <a href="javascript:">内部配置</a>
+                <em></em>
+            </li>
+            <li data-itemid="10" class="navLi">
+                <a href="javascript:">座椅配置</a>
+                <em></em>
+            </li>
+            <li data-itemid="11" class="navLi">
+                <a href="javascript:">多媒体配置</a>
+                <em></em>
+            </li>
+            <li data-itemid="12" class="navLi">
+                <a href="javascript:">灯光配置</a>
+                <em></em>
+            </li>
+            <li data-itemid="13" class="navLi">
+                <a href="javascript:">玻璃/后视镜</a>
+                <em></em>
+            </li>
+            <li data-itemid="14" class="navLi">
+                <a href="javascript:">空调/冰箱</a>
+                <em></em>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="foot">
+
+    <div class="footinfo">
+        <div><a href="#">关于我们</a></div>
+        <div><a href="#">联系我们</a></div>
+        <div><a href="#">加入我们</a></div>
+        <div><a href="#">法律声明</a></div>
+        <div><a href="#">网站导航</a></div>
+        <div><a href="#">意见反馈</a></div>
+    </div>
+    <div class="copyright"><span>云南省新能源汽车信息平台</span></div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/buycarsconfig.js"></script>
+</html>
