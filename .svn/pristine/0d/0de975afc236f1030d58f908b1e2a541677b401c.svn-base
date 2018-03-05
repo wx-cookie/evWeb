@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>相册管理－内容</title>
+	<link rel="stylesheet" href="css/page.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<!--[if IE]>
+	<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+
+<body style="background: #f6f5fa;">
+
+	<!--content S-->
+	<div class="super-content RightMain" id="RightMain">
+		
+		<!--header-->
+		<div class="superCtab">
+			
+			<div class="ctab-title clearfix">
+				<h3>车辆图片管理</h3>
+			</div>
+			
+			<div class="ctab-Main">
+				<div class="ctab-Main-title">
+					<ul class="clearfix" id="indexul">
+						<li><a href="apparencephoto.html" idx="1">外观</a></li>
+						<li class="cur"><a href="middlecontrolphoto.html" idx="2">中控</a>
+						</li>
+						<li><a href="seatphoto.html" idx="3">座椅</a>
+						</li>
+						<li><a href="detailphoto.html" idx="4">细节</a></li>
+					</ul>
+				</div>
+				<div class="ctab-Mian-cont">
+					<div class="xc-btn-bar">
+						<h3>车系名称</h3>
+						<div class="xc-download-bar"><input id="fileImage" class="downloadfile" type="file" size="10" name="fileselect[]" multiple=""><a href="javascript:;" class="downloadImgBtn"><i class="ico-download"></i>上传图片</a></div>
+					</div>
+
+					<div class="xc-all-box clearfix">
+						<div class="subxc-list setfm">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+						<div class="subxc-list">
+							<div class="img"><img src="images/img_xc.jpg"></div>
+							<div class="xc-opr clearfix">
+								<a href="#" class="xc-xiugai-a">删除</a>
+							</div>
+						</div>
+
+					</div>
+						<div id="preview"></div>
+					</div>
+					<!--pages S-->
+					<div class="pageSelect">
+						<div class="pageWrap">
+							<a class="pagePre"><i class="ico-pre">&nbsp;</i></a>
+							<a href="#" class="pagenumb cur">1</a>
+							<a href="#" class="pagenumb">2</a>
+							<a href="#" class="pagenumb">3</a>
+							<a href="#" class="pagenext"><i class="ico-next">&nbsp;</i></a>
+						</div>
+					</div>
+					<!--pages E-->
+				</div>
+			</div>
+		</div>
+		<!--main-->
+	</div>
+	<!--content E-->
+	
+	<div class="layuiBg"></div><!--公共遮罩-->
+	<!-- 修改弹出层-->
+
+</body></html>

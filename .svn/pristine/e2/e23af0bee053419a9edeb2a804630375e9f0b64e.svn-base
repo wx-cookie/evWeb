@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class=" js csstransforms3d"><head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>公共侧边栏</title>
+	<link rel="stylesheet" href="css/page.css">
+	<!--[if lte IE 8]>
+	<link href="css/ie8.css" rel="stylesheet" type="text/css"/>
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!--[if IE]>
+	<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!--side S-->
+	<div class="super-side-menu">
+		<div class="logo"><a href="public_super_cg.html" target="_parent"><img src="images/logo.png"></a></div>
+		
+		<div class="side-menu">
+			<ul>
+				<li class=""><a href="wenzhang_shouye.html" target="Mainindex"><i class="ico-1"></i>文章管理</a></li>
+				<li><a href="commentLists.html" target="Mainindex"><i class="ico-5"></i>评论管理</a></li>
+				<li><a href="questionList.html" target="Mainindex"><i class="ico-5"></i>咨询管理</a></li>
+				<li><a href="carbrandslists.html" target="Mainindex"><i class="ico-6"></i>车辆品牌管理</a></li>
+				<li><a href="carsale.html" target="Mainindex"><i class="ico-6"></i>车系管理</a></li>
+				<li><a href="carserieslist.html" target="Mainindex"><i class="ico-6"></i>车辆管理</a></li>
+				<li><a href="chargingstationList.html" target="Mainindex"><i class="ico-6"></i>充电桩管理</a></li>
+				<li><a href="repairfactoryList.html" target="Mainindex"><i class="ico-6"></i>维修企业管理</a></li>
+				<li><a href="apparencephoto.html" target="Mainindex"><i class="ico-3"></i>车辆图片管理</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--side E-->
+
+<script type="text/javascript">
+	$(function(){
+		$('.side-menu li').click(function(){
+			$(this).addClass('on').siblings().removeClass('on');
+		})
+	})
+</script>
+
+</body></html>
